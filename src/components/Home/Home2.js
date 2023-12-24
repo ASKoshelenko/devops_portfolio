@@ -19,24 +19,21 @@ function Home2() {
               LET ME <span className="purple"> INTRODUCE </span> MYSELF
             </h1>
             <p className="home-about-body">
-              My path in the tech world has led me to master DevOps.
+            In the world of DevOps, I strive for a high level of professionalism, effectively tackling challenges across diverse technical environments.
               <br />
-              <br />My expertise lies in 
-              <i>
-                <b className="purple"> Windows, Linux, MacOS, MySQL, PostgreSQL, MongoDB, and Firebase. </b>
-              </i>
-              <br />
-              <br />
-              I specialize in creating efficient system architectures and implementing cloud-based web solutions, utilizing platforms like
-              <i>
-                <b className="purple">
-                  {" "}
-                  GCP and AWS.
-                </b>
-              </i>
+              <br />My expertise includes leveraging
+              <i><b className="purple"> Docker and Kubernetes </b></i>
+              for developing robust solutions, and I skillfully use 
+              <i><b className="purple"> Jenkins </b></i>
+              for automating and streamlining system processes.
               <br />
               <br />
-              Embracing Agile principles, I continually strive to streamline project management and drive innovation in system architecture and cloud-based solutions.
+              I'm focused on crafting and optimizing scalable cloud solutions on platforms like 
+              <i><b className="purple"> GCP and AWS </b></i>
+              to achieve peak efficiency.
+              <br />
+              <br />
+              Committed to Agile principles, I aim to enhance project management processes and foster continuous innovation in system infrastructure.
             </p>
           </Col>
           <Col md={4} className="myAvtar">
