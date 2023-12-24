@@ -28,14 +28,14 @@ function Projects() {
           Here are a few projects I've worked on recently.
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={phbt}
+              imgPath={jira}
               isBlog={false}
-              title="Pharmbiotest CRM"
-              description="Developed a CRM system tailored for efficient service tracking, bonus system management, customer database handling, and loyalty program enhancement. This solution optimizes client engagement and streamlines service delivery, leveraging advanced database management for improved customer relationship operations."
-              ghLink="https://github.com/ASKoshelenko/phbt"
-              demoLink="https://crm-phbt.web.app/"
+              title="Jira Deployment and Automation"
+              description="Deployed Jira for project management, customizing it with automated scripts for task tracking, sprint planning, and team workflows, thus boosting productivity and aligning with agile methods."
+              ghLink=""
             />
           </Col>
 
@@ -43,9 +43,9 @@ function Projects() {
             <ProjectCard
               imgPath={dockercompose}
               isBlog={false}
-              title="Create infrastructure by Docker-compose"
-              description="An infrastructure has been created to ensure communication between a Wordpress site and a MySQL database using Docker-compose. The Wordpress web server is configured and accessible on port 8080, while the MySQL database is set up to interact effectively with the site."
-              ghLink="https://github.com/ASKoshelenko/"
+              title="Docker-compose Infrastructure"
+              description="Created an infrastructure using Docker-compose, connecting a WordPress site with a MySQL database. Configured the WordPress server on port 8080 and set up MySQL for effective site interaction."
+              ghLink=""
             />
           </Col>
 
@@ -53,9 +53,9 @@ function Projects() {
             <ProjectCard
               imgPath={proxmox}
               isBlog={false}
-              title="Proxmox"
-              description="Successfully deployed a virtual data center on Proxmox, establishing a versatile and robust infrastructure. In this environment, I manage virtual machines and ensure reliability through regular backups, guaranteeing optimal performance and security for all services."
-              ghLink="https://github.com/ASKoshelenko/"
+              title="Proxmox Virtual Data Center"
+              description="Deployed a Proxmox-based virtual data center, managing virtual machines and ensuring high reliability with regular backups. This setup guarantees performance and security for all services."
+              ghLink=""
             />
           </Col>
 
@@ -63,31 +63,30 @@ function Projects() {
             <ProjectCard
               imgPath={nginx}
               isBlog={false}
-              title="Nginx configuration"
-              description="Configured Nginx for domain connection and SSL setup, ensuring secure and efficient web service hosting. This involved mapping a purchased domain to the server, adjusting Nginx configuration files for domain recognition, and implementing SSL/TLS encryption for secure data transfer. The process included obtaining and installing an SSL certificate, configuring HTTPS protocols, and optimizing server blocks for enhanced security and performance. This setup provided a robust, secure foundation for hosting web applications, with improved reliability and user trust."
-              ghLink="https://github.com/ASKoshelenko/"
+              title="Nginx Configuration"
+              description="Configured Nginx for domain connection and SSL, enhancing web service security and efficiency. Adjusted server blocks for improved performance, installing SSL for encrypted data transfer."
+              ghLink=""
             />
           </Col>
-
-          
 
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={jenkins}
               isBlog={false}
-              title="Jenkins"
-              description="Implemented Jenkins on a server, configuring it for automated workflows and continuous integration. This setup involved installing Jenkins, creating pipelines for automated builds, testing, and deployment. Customized Jenkins to cater to specific project requirements, integrating it with version control systems for streamlined development processes. This automation enhances efficiency, consistency, and speed in software development cycles."
-              ghLink="https://github.com/ASKoshelenko/"
+              title="Jenkins Implementation"
+              description="Set up Jenkins for automated workflows and CI, customizing pipelines and integrating with version control systems. This enhanced development efficiency, speed, and consistency."
+              ghLink=""
             />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={jira}
+              imgPath={phbt}
               isBlog={false}
-              title="Jira"
-              description="Deployed Jira for project management and developed automation to enhance team workflows and efficiency. This process included configuring projects, customizing issue types, workflows, and dashboards, as well as writing automation scripts for recurring tasks and notifications. The automation streamlined task tracking, sprint planning, and reporting, significantly boosting productivity and aligning with agile methodologies. These efforts resulted in improved project management, team collaboration, and seamless integration of automated processes within Jira."
-              ghLink="https://github.com/ASKoshelenko/"
+              title="Pharmbiotest CRM"
+              description="Developed a specialized CRM system for Pharmbiotest, enhancing service tracking, client database management, and loyalty programs. Optimized for improved client engagement and streamlined service delivery with advanced database tools."
+              ghLink="https://github.com/ASKoshelenko/phbt"
+              demoLink="https://crm-phbt.web.app/"
             />
           </Col>
 
@@ -95,8 +94,8 @@ function Projects() {
             <ProjectCard
               imgPath={landing}
               isBlog={false}
-              title="Landing page"
-              description="Developed an adaptive landing page using only HTML and CSS, focusing on responsive design principles. This project entailed creating a visually appealing and user-friendly interface that dynamically adjusts to different screen sizes and devices. Utilized advanced CSS techniques like flexbox and media queries to ensure a seamless and engaging user experience across various platforms. The layout and design were meticulously crafted to provide optimal usability and aesthetic appeal without relying on JavaScript or other frameworks."
+              title="Responsive Landing Page"
+              description="Crafted an adaptive landing page using HTML and CSS, focusing on responsive design. Employed advanced CSS for flexibility across devices, ensuring a seamless user experience."
               ghLink="https://github.com/ASKoshelenko/Landing-page#readme"
             />
           </Col>
@@ -105,8 +104,8 @@ function Projects() {
             <ProjectCard
               imgPath={foxtar}
               isBlog={false}
-              title="Foxtar store"
-              description="Designed and developed Foxtar Store, a multi-page online retail platform. This project involved intricate web design, ensuring a user-friendly and responsive interface across various devices. Integrated e-commerce functionalities such as product listings, shopping cart, and checkout processes, providing a comprehensive online shopping experience."
+              title="Foxtar Online Store"
+              description="Developed the Foxtar Store, a comprehensive online retail platform with user-friendly design. Incorporated e-commerce features like product listings and shopping cart for a complete shopping experience."
               ghLink="https://github.com/ASKoshelenko/Project-Store#readme"
             />
           </Col>
@@ -115,8 +114,8 @@ function Projects() {
             <ProjectCard
               imgPath={calc}
               isBlog={false}
-              title="Calculator"
-              description="I developed a calculator project using Vue.js featuring undo and redo functionalities. This interactive calculator allows users to perform standard calculations with the added ability to revert or repeat actions, enhancing usability and efficiency. The implementation effectively leverages Vue.js's reactivity and state management capabilities."
+              title="Vue.js Calculator"
+              description="Built an interactive calculator using Vue.js, featuring undo and redo functions. This project showcases Vue.js's capabilities in reactivity and state management."
               ghLink="https://github.com/ASKoshelenko/calculator"
             />
           </Col>
@@ -125,8 +124,8 @@ function Projects() {
             <ProjectCard
               imgPath={chess}
               isBlog={false}
-              title="Chess"
-              description="ADeveloped a two-player chess game using React, offering a dynamic, interactive experience. This project integrates classic chess rules with a sleek, user-friendly interface, allowing for engaging gameplay. Implemented efficient state management for game progress tracking, enhancing the strategic aspect of the game."
+              title="Chess Game in React"
+              description="Developed a two-player chess game with React, integrating classic rules into a dynamic interface. Efficiently managed game state for enhanced strategic gameplay."
               ghLink="https://github.com/ASKoshelenko/chess#readme"            
             />
           </Col>
@@ -135,8 +134,8 @@ function Projects() {
             <ProjectCard
               imgPath={fakestore}
               isBlog={false}
-              title="Fake store"
-              description="Developed a practice application using React that interacts with FakeStoreAPI for a realistic e-commerce experience. This app allows users to browse, add items to a cart, and simulate purchases, providing a hands-on way to understand API integration, state management, and UI design in React."
+              title="Fake Store Application"
+              description="Developed a React application simulating an e-commerce experience with FakeStoreAPI. Features include browsing products, adding to cart, and understanding API integration."
               ghLink="https://github.com/ASKoshelenko/fakeStoreAPI#readme"
             />
           </Col>
@@ -145,8 +144,8 @@ function Projects() {
             <ProjectCard
               imgPath={git}
               isBlog={false}
-              title="Github search"
-              description="A web application designed for searching and collecting GitHub repositories. This app allows users to efficiently search for repositories using various criteria, view detailed information, and save their favorite repositories for easy access. The application leverages GitHub's API for real-time data and is built with a focus on user-friendly navigation and efficient data handling."
+              title="GitHub Repository Search App"
+              description="Designed a web app for searching GitHub repositories, enabling users to search, view details, and save favorite repositories. Utilizes GitHub's API for real-time data retrieval."
               ghLink="https://github.com/ASKoshelenko/react_githubSearch#readme"
             />
           </Col>
