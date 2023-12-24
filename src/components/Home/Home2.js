@@ -7,7 +7,14 @@ import {
   AiOutlineTwitter,
   AiFillInstagram,
 } from "react-icons/ai";
-import { FaLinkedinIn } from "react-icons/fa";
+import { 
+  FaLinkedinIn,
+  FaTelegramPlane, 
+} from "react-icons/fa";
+
+import { 
+  TbMail, 
+} from "react-icons/tb";
 
 function Home2() {
   return (
@@ -51,6 +58,36 @@ function Home2() {
             <ul className="home-about-social-links">
               <li className="social-icons">
                 <a
+                  href="mailto:askoshelenko@gmail.com"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="icon-colour  home-social-icons"
+                >
+                  <TbMail />
+                </a>
+              </li>
+              <li className="social-icons">
+                <a
+                  href="https://t.me/askoshelenko"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="icon-colour  home-social-icons"
+                >
+                  <FaTelegramPlane />
+                </a>
+              </li>
+              <li className="social-icons">
+                <a
+                  href="https://www.linkedin.com/in/askoshelenko/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="icon-colour  home-social-icons"
+                >
+                  <FaLinkedinIn />
+                </a>
+              </li>
+              <li className="social-icons">
+                <a
                   href="https://github.com/askoshelenko"
                   target="_blank"
                   rel="noreferrer"
@@ -67,16 +104,6 @@ function Home2() {
                   className="icon-colour  home-social-icons"
                 >
                   <AiOutlineTwitter />
-                </a>
-              </li>
-              <li className="social-icons">
-                <a
-                  href="https://www.linkedin.com/in/askoshelenko/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour  home-social-icons"
-                >
-                  <FaLinkedinIn />
                 </a>
               </li>
               <li className="social-icons">
