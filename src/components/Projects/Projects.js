@@ -13,6 +13,7 @@ import git from "../../Assets/Projects/git.png";
 import jenkins from "../../Assets/Projects/jenkins.png";
 import jira from "../../Assets/Projects/jira.png";
 import landing from "../../Assets/Projects/landing.png";
+import proxmox from "../../Assets/Projects/proxmox.png";
 
 
 function Projects() {
@@ -40,6 +41,26 @@ function Projects() {
 
           <Col md={4} className="project-card">
             <ProjectCard
+              imgPath={dockercompose}
+              isBlog={false}
+              title="Create infrastructure by Docker-compose"
+              description="An infrastructure has been created to ensure communication between a Wordpress site and a MySQL database using Docker-compose. The Wordpress web server is configured and accessible on port 8080, while the MySQL database is set up to interact effectively with the site."
+              ghLink="https://github.com/ASKoshelenko/"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={proxmox}
+              isBlog={false}
+              title="Proxmox"
+              description="Successfully deployed a virtual data center on Proxmox, establishing a versatile and robust infrastructure. In this environment, I manage virtual machines and ensure reliability through regular backups, guaranteeing optimal performance and security for all services."
+              ghLink="https://github.com/ASKoshelenko/"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
               imgPath={nginx}
               isBlog={false}
               title="Nginx configuration"
@@ -48,15 +69,7 @@ function Projects() {
             />
           </Col>
 
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={dockercompose}
-              isBlog={false}
-              title="Create infrastructure by Docker-compose"
-              description="An infrastructure has been created to ensure communication between a Wordpress site and a MySQL database using Docker-compose. The Wordpress web server is configured and accessible on port 8080, while the MySQL database is set up to interact effectively with the site."
-              ghLink="https://github.com/ASKoshelenko/"
-            />
-          </Col>
+          
 
           <Col md={4} className="project-card">
             <ProjectCard
