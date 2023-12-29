@@ -103,8 +103,6 @@ function NavBar() {
                 <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
               </Nav.Link>
             </Nav.Item>
-
-            {/* Другие элементы Nav.Item, если нужно */}
           </Nav>
         </Navbar.Collapse>
       </Container>
