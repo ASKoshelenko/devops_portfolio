@@ -4,7 +4,7 @@ import myImg from "../../Assets/avatar.svg";
 import Tilt from "react-parallax-tilt";
 import {
   AiFillGithub,
-  AiFillInstagram,
+  // AiFillInstagram,
 } from "react-icons/ai";
 import { 
   FaLinkedinIn,
@@ -105,7 +105,7 @@ function Home2() {
                   <AiOutlineTwitter />
                 </a>
               </li> */}
-              <li className="social-icons">
+              {/* <li className="social-icons">
                 <a
                   href="https://www.instagram.com/askoshelenko"
                   target="_blank"
@@ -114,7 +114,7 @@ function Home2() {
                 >
                   <AiFillInstagram />
                 </a>
-              </li>
+              </li> */}
             </ul>
           </Col>
         </Row>
