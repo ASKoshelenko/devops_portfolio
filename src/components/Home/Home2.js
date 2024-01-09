@@ -2,44 +2,34 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import myImg from "../../Assets/avatar.svg";
 import Tilt from "react-parallax-tilt";
-import {
-  AiFillGithub,
-  // AiFillInstagram,
-} from "react-icons/ai";
-import { 
-  FaLinkedinIn,
-  FaTelegramPlane, 
-} from "react-icons/fa";
-
-import { 
-  TbMail, 
-} from "react-icons/tb";
+import { AiFillGithub } from "react-icons/ai";
+import { FaLinkedinIn, FaTelegramPlane } from "react-icons/fa";
+import { TbMail } from "react-icons/tb";
+import { useTranslation } from 'react-i18next'; // Імпорт хука useTranslation
 
 function Home2() {
+  const { t } = useTranslation(); // Ініціалізація хука
+
   return (
     <Container fluid className="home-about-section" id="about">
       <Container>
         <Row>
           <Col md={8} className="home-about-description">
             <h1 style={{ fontSize: "2.6em" }}>
-              LET ME <span className="purple"> INTRODUCE </span> MYSELF
+              {t('home_introduce_myself')}
+              <strong className="main-name"> {t('home_introduce')}</strong>
             </h1>
             <p className="home-about-body">
-            In the world of DevOps, I strive for a high level of professionalism, effectively tackling challenges across diverse technical environments.
-              <br />
-              <br />My expertise includes leveraging
-              <i><b className="purple"> Docker and Kubernetes </b></i>
-              for developing robust solutions, and I skillfully use 
-              <i><b className="purple"> Jenkins </b></i>
-              for automating and streamlining system processes.
+              {t('home_about_description1')}
               <br />
               <br />
-              I'm focused on crafting and optimizing scalable cloud solutions on platforms like 
-              <i><b className="purple"> GCP and AWS </b></i>
-              to achieve peak efficiency.
+              {t('home_about_description2')}
               <br />
               <br />
-              Committed to Agile principles, I aim to enhance project management processes and foster continuous innovation in system infrastructure.
+              {t('home_about_description3')}
+              <br />
+              <br />
+              {t('home_about_description4')}
             </p>
           </Col>
           <Col md={4} className="myAvtar">
@@ -50,9 +40,9 @@ function Home2() {
         </Row>
         <Row>
           <Col md={12} className="home-about-social">
-            <h1>FIND ME ON</h1>
+            <h1>{t('home_find_me_on')}</h1>
             <p>
-              Feel free to <span className="purple">connect </span>with me
+              {t('home_connect_with_me')}
             </p>
             <ul className="home-about-social-links">
               <li className="social-icons">
@@ -122,4 +112,5 @@ function Home2() {
     </Container>
   );
 }
+
 export default Home2;
