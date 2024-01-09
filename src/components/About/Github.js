@@ -1,13 +1,16 @@
 import React from "react";
 import GitHubCalendar from "react-github-calendar";
 import { Row } from "react-bootstrap";
+import { useTranslation } from 'react-i18next'; // Добавьте этот импорт
 
 function Github() {
+  const { t } = useTranslation(); // Используйте хук useTranslation
+
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
       <h1 className="project-heading" style={{ paddingBottom: "20px" }}>
-        Days I <strong className="purple">Code</strong>
-        <h6>Web its my hobby</h6>
+        {t('github_days_i_code')} <strong className="purple">{t('github_code')}</strong>
+        <h6>{t('github_web_hobby')}</h6>
       </h1>
       <GitHubCalendar
         username="askoshelenko"

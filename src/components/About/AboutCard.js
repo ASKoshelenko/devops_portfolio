@@ -1,37 +1,42 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
 import { ImPointRight } from "react-icons/im";
+import { useTranslation } from 'react-i18next'; // Добавьте этот импорт
 
 function AboutCard() {
+  const { t } = useTranslation(); // Используйте хук useTranslation
+
   return (
     <Card className="quote-card-view">
       <Card.Body>
         <blockquote className="blockquote mb-0">
           <p style={{ textAlign: "justify" }}>
-            Hi Everyone, I am <span className="purple">Alex Koshelenko </span>
-            from <span className="purple"> Ukraine.</span>
-            <br />
-            I am currently looking for a Dream job.
-            <br />
-            I successfully complited all the requerements to be recognized as a Google Cloud Certified Professional Cloud DevOps Engineer.
+            {t('about_card_intro')} <span className="purple">{t('home_name')} </span>
+            {t('about_card_from')} <span className="purple"> {t('about_card_country')}. </span>
             <br />
             <br />
-            Apart from self-learning, some other activities that I love to do!
+            {t('about_card_currently_looking')}
+            <br />
+            <br />
+            {t('about_card_certification')}
+            <br />
+            <br />
+            {t('about_card_activities_intro')}
           </p>
           <ul>
             <li className="about-activity">
-              <ImPointRight /> Sport activities
+              <ImPointRight /> {t('about_card_activity_sport')}
             </li>
             <li className="about-activity">
-              <ImPointRight /> Watching a TV shows
+              <ImPointRight /> {t('about_card_activity_tv')}
             </li>
             <li className="about-activity">
-              <ImPointRight /> Reading books
+              <ImPointRight /> {t('about_card_activity_reading')}
             </li>
           </ul>
 
           <p style={{ color: "rgb(155 126 172)" }}>
-            "DevOpsDive: Engineering Tomorrow's Solutions, Today"{" "}
+            {t('about_card_quote')}
           </p>
           <footer className="blockquote-footer">ASKoshelenko</footer>
         </blockquote>
