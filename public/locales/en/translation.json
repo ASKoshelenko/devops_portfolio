@@ -57,7 +57,7 @@
   "project_multipage_description": "Developed the Foxtar Store, a comprehensive online retail platform with user-friendly design. Incorporated e-commerce features like product listings and shopping cart for a complete shopping experience.",
   "project_calculator_title": "Vue.js Calculator",
   "project_calculator_description": "Built an interactive calculator using Vue.js, featuring undo and redo functions. This project showcases Vue.js's capabilities in reactivity and state management.",
-  "project_chess_title": "Chess Game in React",
+  "project_chess_title": "React-based Chess Game",
   "project_chess_description": "Developed a two-player chess game with React, integrating classic rules into a dynamic interface. Efficiently managed game state for enhanced strategic gameplay.",
   "project_fakestore_title": "Fake Store Application",
   "project_fakestore_description": "Developed a React application simulating an e-commerce experience with FakeStoreAPI. Features include browsing products, adding to cart, and understanding API integration.",
