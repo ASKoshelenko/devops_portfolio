@@ -321,6 +321,8 @@ button:focus {
   position: relative;
   padding-bottom: 70px !important;
   padding-top: 70px !important;
+  /* padding-left: 20px !important; */
+  /* padding-right: 20px !important; */
 }
 
 .home-about-description {

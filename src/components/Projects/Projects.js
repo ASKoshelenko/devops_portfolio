@@ -24,7 +24,7 @@ function Projects() {
       <Particle />
       <Container>
         <h1 className="project-heading">
-          {t("projects_my_recent_works")} <strong className="purple">{t("github_code")}</strong>
+          {t("projects_my_recent_works")}
         </h1>
         <p style={{ color: "white" }}>
           {t("projects_description")}

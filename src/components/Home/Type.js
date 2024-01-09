@@ -13,7 +13,8 @@ function Type() {
       t('type_dreamy_devops'),
       t('type_atlassian_administrator'),
       t('type_computer_system_engineer'),
-      t('type_newbie_web_developer')
+      t('type_newbie_web_developer'),
+      t('type_ethnical_hacker')
     ]);
   }, [t, i18n.language]);
 

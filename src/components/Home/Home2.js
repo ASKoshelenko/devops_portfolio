@@ -41,9 +41,7 @@ function Home2() {
         <Row>
           <Col md={12} className="home-about-social">
             <h1>{t('home_find_me_on')}</h1>
-            <p>
-              {t('home_connect_with_me')}
-            </p>
+            
             <ul className="home-about-social-links">
               <li className="social-icons">
                 <a
@@ -106,6 +104,9 @@ function Home2() {
                 </a>
               </li> */}
             </ul>
+            <p>
+              {t('home_connect_with_me')}
+            </p>
           </Col>
         </Row>
       </Container>
