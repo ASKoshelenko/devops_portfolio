@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/static/css/main.0a7fd081.css",
+    "main.js": "/static/js/main.9462d743.js",
+    "static/js/787.7da95b79.chunk.js": "/static/js/787.7da95b79.chunk.js",
+    "static/media/Koshelenko.pdf": "/static/media/Koshelenko.d4c31bfc8ffb09db854f.pdf",
+    "static/media/CV_Koshelenko.pdf": "/static/media/CV_Koshelenko.c8a501c3cab4527247a5.pdf",
+    "static/media/logo.png": "/static/media/logo.36642c0d1ffb5b501381.png",
+    "static/media/jira.png": "/static/media/jira.9977f1f007632e183c92.png",
+    "static/media/home-main.svg": "/static/media/home-main.359935c39288e92d4dba5c9f2445b91d.svg",
+    "static/media/about.png": "/static/media/about.aee0f771fbfc1e7b8fa8.png",
+    "static/media/proxmox.png": "/static/media/proxmox.ecd06ec876397a39afb3.png",
+    "static/media/dockercompose.png": "/static/media/dockercompose.8bea3c85909c6220b10b.png",
+    "static/media/chess.png": "/static/media/chess.fe6fac0a9c1bb1d8716f.png",
+    "static/media/nginx.png": "/static/media/nginx.cdaed18e26de6e32aacf.png",
+    "static/media/foxtar.png": "/static/media/foxtar.6cf66944d75a95083120.png",
+    "static/media/phbt.png": "/static/media/phbt.ee2b4ed38184b9262d29.png",
+    "static/media/landing.png": "/static/media/landing.43d5fa72419259ebfe21.png",
+    "static/media/jenkins.png": "/static/media/jenkins.6ac46291d8d7296199d2.png",
+    "static/media/calc.png": "/static/media/calc.d91de4f7e8e820078245.png",
+    "static/media/fakestore.png": "/static/media/fakestore.3434ee65c715ebe16199.png",
+    "static/media/git.png": "/static/media/git.c223b8f49ca4236830e8.png",
+    "static/media/home-bg.jpg": "/static/media/home-bg.dc52d5d40a40b13154b0.jpg",
+    "static/media/flagEN.png": "/static/media/flagEN.b16a98baf98e86f20e76.png",
+    "static/media/flagRU.png": "/static/media/flagRU.8429cb6b49dec5c660fc.png",
+    "static/media/avatar.svg": "/static/media/avatar.91932289a5ed4058f79b9fa7afb242f1.svg",
+    "static/media/pre.svg": "/static/media/pre.4410c5baaa673cc131da.svg",
+    "index.html": "/index.html",
+    "static/media/getFetch.cjs": "/static/media/getFetch.40f37ddea2378391108f.cjs",
+    "main.0a7fd081.css.map": "/static/css/main.0a7fd081.css.map",
+    "main.9462d743.js.map": "/static/js/main.9462d743.js.map",
+    "787.7da95b79.chunk.js.map": "/static/js/787.7da95b79.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0a7fd081.css",
+    "static/js/main.9462d743.js"
+  ]
+}

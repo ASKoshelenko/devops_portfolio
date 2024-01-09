@@ -1,0 +1,25 @@
+{
+  "short_name": "DevOpsDive",
+  "name": "DevOpsDive: Engineering Tomorrow's Solutions, Today",
+  "icons": [
+    {
+      "src": "img/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "img/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "img/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#5bbad5",
+  "background_color": "#ffffff"
+}
