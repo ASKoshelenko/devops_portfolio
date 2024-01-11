@@ -9,20 +9,19 @@ import HttpBackend from 'i18next-http-backend';
 import LanguageDetector from 'i18next-browser-languagedetector';
 
 
-// Инициализация i18next
 i18n
-  .use(HttpBackend) // загрузка переводов с сервера
-  .use(LanguageDetector) // определение предпочитаемого языка
-  .use(initReactI18next) // передача i18n в react-i18next
+  .use(HttpBackend) 
+  .use(LanguageDetector)
+  .use(initReactI18next)
   .init({
-    fallbackLng: 'en', // язык по умолчанию
-    debug: true, // вывод отладочной информации в консоль
+    fallbackLng: 'en',
+    debug: true, 
     detection: {
       order: ['queryString', 'cookie', 'localStorage', 'path', 'subdomain'],
       caches: ['cookie'],
     },
     backend: {
-      loadPath: '/locales/{{lng}}/{{ns}}.json', // путь к файлам локализации
+      loadPath: '/locales/{{lng}}/{{ns}}.json',
     },
   });
 

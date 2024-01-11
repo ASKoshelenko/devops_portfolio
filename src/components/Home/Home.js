@@ -4,10 +4,10 @@ import homeLogo from "../../Assets/home-main.svg";
 import Particle from "../Particle";
 import Home2 from "./Home2";
 import Type from "./Type";
-import { useTranslation } from 'react-i18next'; // Импорт хука useTranslation
+import { useTranslation } from 'react-i18next';
 
 function Home() {
-  const { t } = useTranslation(); // Инициализация хука
+  const { t } = useTranslation();
 
   return (
     <section>

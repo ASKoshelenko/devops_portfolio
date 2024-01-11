@@ -6,10 +6,10 @@ import Techstack from "./Techstack";
 import Aboutcard from "./AboutCard";
 import laptopImg from "../../Assets/about.png";
 import Toolstack from "./Toolstack";
-import { useTranslation } from 'react-i18next'; // Добавьте этот импорт
+import { useTranslation } from 'react-i18next';
 
 function About() {
-  const { t } = useTranslation(); // Используйте хук useTranslation
+  const { t } = useTranslation(); 
 
   return (
     <Container fluid className="about-section">
@@ -25,7 +25,7 @@ function About() {
             }}
           >
             <h1 style={{ fontSize: "2.1em", paddingBottom: "20px" }}>
-              {t('about_title')} {/* Используйте ключи перевода здесь */}
+              {t('about_title')}
             </h1>
             <Aboutcard />
           </Col>
@@ -38,13 +38,13 @@ function About() {
           </Col>
         </Row>
         <h1 className="project-heading">
-          {t('professional_skillset')} {/* Используйте ключи перевода здесь */}
+          {t('professional_skillset')}
         </h1>
 
         <Techstack />
 
         <h1 className="project-heading">
-          {t('tools_i_use')} {/* Используйте ключи перевода здесь */}
+          {t('tools_i_use')}
         </h1>
         <Toolstack />
 

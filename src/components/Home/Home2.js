@@ -5,10 +5,10 @@ import Tilt from "react-parallax-tilt";
 import { AiFillGithub } from "react-icons/ai";
 import { FaLinkedinIn, FaTelegramPlane } from "react-icons/fa";
 import { TbMail } from "react-icons/tb";
-import { useTranslation } from 'react-i18next'; // Імпорт хука useTranslation
+import { useTranslation } from 'react-i18next';
 
 function Home2() {
-  const { t } = useTranslation(); // Ініціалізація хука
+  const { t } = useTranslation();
 
   return (
     <Container fluid className="home-about-section" id="about">

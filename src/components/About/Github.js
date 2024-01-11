@@ -1,10 +1,10 @@
 import React from "react";
 import GitHubCalendar from "react-github-calendar";
 import { Row } from "react-bootstrap";
-import { useTranslation } from 'react-i18next'; // Добавьте этот импорт
+import { useTranslation } from 'react-i18next';
 
 function Github() {
-  const { t } = useTranslation(); // Используйте хук useTranslation
+  const { t } = useTranslation();
 
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>

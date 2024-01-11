@@ -24,16 +24,13 @@ function ResumeNew() {
   useEffect(() => {
     setWidth(window.innerWidth);
 
-    // Выбор файла резюме на основе текущей локали
     const currentLocale = i18n.language;
     const resumeFile = currentLocale === "ua" ? ua_pdf : en_pdf;
 
-    // Устанавливаем путь к файлу резюме
     setPdfPath(resumeFile);
   }, [i18n.language]);
 
   if (!pdfPath) {
-    // Если pdfPath не установлен, отобразите загрузку или другую заглушку
     return <div>Loading...</div>;
   }
 
@@ -41,7 +38,6 @@ function ResumeNew() {
     <div>
       <Container fluid className="resume-section">
         <Particle />
-          {/* Кнопки выбора версии резюме */}
           <Row style={{ justifyContent: "center", position: "relative" }}>
             <Button 
               variant="primary"

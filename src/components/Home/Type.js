@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Typewriter from "typewriter-effect";
-import { useTranslation } from 'react-i18next'; // Импорт хука useTranslation
+import { useTranslation } from 'react-i18next';
 
 function Type() {
-  const { t, i18n } = useTranslation(); // Инициализация хука
+  const { t, i18n } = useTranslation();
   const [typeStrings, setTypeStrings] = useState([]);
 
   useEffect(() => {
