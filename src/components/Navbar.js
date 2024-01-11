@@ -9,7 +9,7 @@ import { CgFileDocument } from "react-icons/cg";
 import { useTranslation } from 'react-i18next';
 import flagEN from '../Assets/flagEN.png'; 
 import flagUA from '../Assets/flagUA.png'; 
-import flagRU from '../Assets/flagRU.png'; 
+// import flagRU from '../Assets/flagRU.png'; 
 
 
 function NavBar() {
