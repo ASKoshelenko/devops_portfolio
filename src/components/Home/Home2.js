@@ -83,6 +83,8 @@ function Home2() {
                   <AiFillGithub />
                 </a>
               </li>
+              {/* My Twitter and Instagram social */}
+              
               {/* <li className="social-icons">
                 <a
                   href="https://twitter.com/askoshelenko"
