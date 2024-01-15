@@ -19,7 +19,7 @@
 .env.test.local
 .env.production.local
 
-# Игнорирование конкретных PDF-файлов
+# Игнорирование PDF-файлов
 /src/Assets/CV_Koshelenko.pdf
 /src/Assets/Koshelenko.pdf
 
