@@ -4,9 +4,11 @@ import Particle from "../Particle";
 import Github from "./Github";
 import Techstack from "./Techstack";
 import Aboutcard from "./AboutCard";
+import Achievements from "./Achievements";
 import laptopImg from "../../Assets/about.png";
 import Toolstack from "./Toolstack";
 import { useTranslation } from 'react-i18next';
+
 
 function About() {
   const { t } = useTranslation(); 
@@ -37,6 +39,12 @@ function About() {
             <img src={laptopImg} alt="about" className="img-fluid" />
           </Col>
         </Row>
+        <h1 className="project-heading">
+          {t('bages_and_certificates')}
+          <p style={{ color: "rgb(155 126 172)" }}>{t('click_to_verify')}</p>
+        </h1>
+        <Achievements />
+
         <h1 className="project-heading">
           {t('professional_skillset')}
         </h1>
