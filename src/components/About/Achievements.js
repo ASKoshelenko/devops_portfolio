@@ -19,7 +19,7 @@ function Achievements() {
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <a href="https://certificates.epam.com/certificates/3419ea71-a724-4ecc-b00b-50469996fef4" target="_blank" rel="noopener noreferrer">
-          <img src={epam} alt="EPAM" style={{ width: "120px", height: "90px" }}/>
+          <img src={epam} alt="EPAM" style={{ width: "120px", height: "80px" }}/>
         </a>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
