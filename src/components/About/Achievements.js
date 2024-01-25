@@ -18,28 +18,8 @@ function Achievements() {
         </a>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <a href="https://certificates.epam.com/certificates/3419ea71-a724-4ecc-b00b-50469996fef4" target="_blank" rel="noopener noreferrer">
-          <img src={epam} alt="EPAM" style={{ width: "120px", height: "80px" }}/>
-        </a>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <a href="https://www.credly.com/badges/8391f0a4-a945-4ee4-9688-eb07ec0a2ac1" target="_blank" rel="noopener noreferrer">
-          <img src={cyberThreatBadge} alt="Cyber Threat Management Badge" />
-        </a>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <a href="https://www.credly.com/badges/8edec4aa-9657-49ea-931f-90283d72b226" target="_blank" rel="noopener noreferrer">
-          <img src={endpointSecurityBadge} alt="Endpoint Security Badge" />
-        </a>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
         <a href="https://www.credly.com/badges/ecb3b494-fbe7-4ece-9e7c-97ba7bcef596" target="_blank" rel="noopener noreferrer">
           <img src={ethicalHackerBadge} alt="Ethical Hacker Badge" />
-        </a>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <a href="https://www.credly.com/badges/79565c4d-dfcb-4efb-a416-d07cbeb43d9f" target="_blank" rel="noopener noreferrer">
-          <img src={juniorCybersecurityBadge} alt="Junior Cybersecurity Analyst Career Path Badge" />
         </a>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
@@ -48,8 +28,28 @@ function Achievements() {
         </a>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
+        <a href="https://www.credly.com/badges/8391f0a4-a945-4ee4-9688-eb07ec0a2ac1" target="_blank" rel="noopener noreferrer">
+          <img src={cyberThreatBadge} alt="Cyber Threat Management Badge" />
+        </a>
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <a href="https://www.credly.com/badges/79565c4d-dfcb-4efb-a416-d07cbeb43d9f" target="_blank" rel="noopener noreferrer">
+          <img src={juniorCybersecurityBadge} alt="Junior Cybersecurity Analyst Career Path Badge" />
+        </a>
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <a href="https://www.credly.com/badges/8edec4aa-9657-49ea-931f-90283d72b226" target="_blank" rel="noopener noreferrer">
+          <img src={endpointSecurityBadge} alt="Endpoint Security Badge" />
+        </a>
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
         <a href="https://www.credly.com/badges/9df01def-6b9b-4bc2-90e1-816a9dc4b1b2" target="_blank" rel="noopener noreferrer">
           <img src={networkTechnicianBadge} alt="Network Technician Career Path Badge" />
+        </a>
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <a href="https://certificates.epam.com/certificates/3419ea71-a724-4ecc-b00b-50469996fef4" target="_blank" rel="noopener noreferrer">
+          <img src={epam} alt="EPAM" style={{ width: "128px", height: "90px" }}/>
         </a>
       </Col>
     </Row>
