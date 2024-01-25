@@ -14,7 +14,7 @@ function Achievements() {
      <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
       <Col xs={4} md={2} className="tech-icons">
         <a href="https://google.accredible.com/63bc83c7-01dd-40f5-a26c-16ad53126920#gs.23goji" target="_blank" rel="noopener noreferrer">
-          <img src={gcpBadge} alt="GCP Badge" style={{ width: "120px", height: "120px" }} />
+          <img src={gcpBadge} alt="GCP Badge" style={{ width: "125px", height: "125px" }} />
         </a>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
@@ -49,7 +49,7 @@ function Achievements() {
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <a href="https://certificates.epam.com/certificates/3419ea71-a724-4ecc-b00b-50469996fef4" target="_blank" rel="noopener noreferrer">
-          <img src={epam} alt="EPAM" style={{ width: "128px", height: "90px" }}/>
+          <img src={epam} alt="EPAM" style={{ width: "125px", height: "125px" }}/>
         </a>
       </Col>
     </Row>
