@@ -41,7 +41,7 @@ function About() {
         </Row>
         <h1 className="project-heading">
           {t('bages_and_certificates')}
-          <p style={{ color: "rgb(155 126 172)" }}>{t('click_to_verify')}</p>
+          {/* <p style={{ color: "rgb(155 126 172)" }}>{t('click_to_verify')}</p> */}
         </h1>
         <Achievements />
 
