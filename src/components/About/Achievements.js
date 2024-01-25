@@ -1,7 +1,7 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
 import gcpBadge from "../../Assets/achievements/gcp.png";
-import epam from "../../Assets/achievements/EPAM_BIG.png";
+import epam from "../../Assets/achievements/EPAM.png";
 import cyberThreatBadge from "../../Assets/achievements/sm_cyber-threat-management.png";
 import endpointSecurityBadge from "../../Assets/achievements/sm_endpoint-security.png";
 import ethicalHackerBadge from "../../Assets/achievements/sm_ethical-hacker.png";
