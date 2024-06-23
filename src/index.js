@@ -20,7 +20,7 @@ const firebaseConfig = {
 };
 
 // Инициализация Firebase
-const firebaseApp = initializeApp(firebaseConfig);
+initializeApp(firebaseConfig);
 
 i18n
   .use(HttpBackend)
