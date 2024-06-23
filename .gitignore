@@ -20,10 +20,10 @@
 .env.production.local
 
 # Игнорирование PDF-файлов
-/src/Assets/CV_Koshelenko.pdf
-/src/Assets/Koshelenko.pdf
+# /src/Assets/CV_Koshelenko.pdf
+# /src/Assets/Koshelenko.pdf
 
-.pdf
+# .pdf
 
 npm-debug.log*
 yarn-debug.log*
