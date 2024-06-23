@@ -1,17 +1,17 @@
 {
-    "hosting": {
-      "site": "devopsdive",
-      "public": "build",
-      "ignore": [
-        "firebase.json",
-        "**/.*",
-        "**/node_modules/**"
-      ],
-      "rewrites": [
-        {
-          "source": "**",
-          "destination": "build/index.html"
-        }
-      ]
-    }
+  "hosting": {
+    "site": "devopsdive",
+    "public": "build",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "build/index.html"
+      }
+    ]
   }
+}
