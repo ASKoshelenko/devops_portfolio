@@ -6,6 +6,10 @@ on:
   pull_request:
     branches: [ azure ]
 
+env:
+  NODE_VERSION: '20'
+  AZURE_WEBAPP_NAME: 'DevOpsDive'
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -13,13 +17,28 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     
-    - name: Set up Node.js
+    - name: Use Node.js ${{ env.NODE_VERSION }}
       uses: actions/setup-node@v4
       with:
-        node-version: '20'
+        node-version: ${{ env.NODE_VERSION }}
+        
+    - name: Cache node modules
+      uses: actions/cache@v3
+      env:
+        cache-name: cache-node-modules
+      with:
+        path: ~/.npm
+        key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-build-${{ env.cache-name }}-
+          ${{ runner.os }}-build-
+          ${{ runner.os }}-
         
     - name: Install dependencies
-      run: npm install
+      run: npm ci
+      
+    - name: Run tests
+      run: npm test
       
     - name: Build
       run: npm run build
@@ -38,6 +57,8 @@ jobs:
       with:
         push: true
         tags: dreamymonkey/devopsdive:latest,dreamymonkey/devopsdive:${{ github.sha }}
+        cache-from: type=registry,ref=dreamymonkey/devopsdive:latest
+        cache-to: type=inline
         
     - name: Login to Azure
       uses: azure/login@v2
@@ -47,5 +68,11 @@ jobs:
     - name: Deploy to Azure Web App
       uses: azure/webapps-deploy@v3
       with:
-        app-name: 'DevOpsDive'
+        app-name: ${{ env.AZURE_WEBAPP_NAME }}
         images: 'dreamymonkey/devopsdive:${{ github.sha }}'
+        
+    - name: Azure logout
+      run: |
+        az logout
+        az cache purge
+        az account clear
