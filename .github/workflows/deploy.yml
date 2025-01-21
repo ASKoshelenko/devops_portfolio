@@ -48,7 +48,7 @@ jobs:
       
     - name: Deploy to Kubernetes
       run: |
-        echo "${{ secrets.KUBE_CONFIG }}" > kubeconfig
+        echo "${{ secrets.KUBE_CONFIG }}" | base64 -d > kubeconfig
         export KUBECONFIG=kubeconfig
         
         # Apply Kubernetes manifests
