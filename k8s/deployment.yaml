@@ -1,0 +1,27 @@
+# k8s/deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: devopsdive
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: devopsdive
+  template:
+    metadata:
+      labels:
+        app: devopsdive
+    spec:
+      containers:
+      - name: devopsdive
+        image: dreamymonkey/devopsdive:latest
+        ports:
+        - containerPort: 80
+        resources:
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
+          requests:
+            memory: "256Mi"
+            cpu: "250m"
