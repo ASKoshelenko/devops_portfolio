@@ -49,20 +49,14 @@ jobs:
     - name: Deploy to Kubernetes
       run: |
         echo "${{ secrets.KUBE_CONFIG }}" | base64 -d > kubeconfig
-        if [ $? -ne 0 ]; then
-          echo "Failed to decode kubeconfig"
-          exit 1
-        fi
-        ls -l kubeconfig
         export KUBECONFIG=kubeconfig
         
-        # Test kubectl
+        # Проверка доступности
         kubectl version --client
+        kubectl cluster-info
+        kubectl get nodes
         
-        # Apply Kubernetes manifests
-        kubectl apply -f k8s/deployment.yaml
-        kubectl apply -f k8s/service.yaml
-        kubectl apply -f k8s/ingress.yaml
-        
-        # Update deployment with new image
-        kubectl set image deployment/devopsdive devopsdive=${{ env.DOCKER_IMAGE }}:${{ github.sha }}
+        # Если всё работает, применяем манифесты с --v=5 для отладки
+        kubectl apply -f k8s/deployment.yaml --v=5
+        kubectl apply -f k8s/service.yaml --v=5
+        kubectl apply -f k8s/ingress.yaml --v=5
