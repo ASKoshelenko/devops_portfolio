@@ -49,7 +49,15 @@ jobs:
     - name: Deploy to Kubernetes
       run: |
         echo "${{ secrets.KUBE_CONFIG }}" | base64 -d > kubeconfig
+        if [ $? -ne 0 ]; then
+          echo "Failed to decode kubeconfig"
+          exit 1
+        fi
+        ls -l kubeconfig
         export KUBECONFIG=kubeconfig
+        
+        # Test kubectl
+        kubectl version --client
         
         # Apply Kubernetes manifests
         kubectl apply -f k8s/deployment.yaml
