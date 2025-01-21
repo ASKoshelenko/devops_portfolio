@@ -60,4 +60,3 @@ jobs:
         kubectl apply -f k8s/deployment.yaml --v=5
         kubectl apply -f k8s/service.yaml --v=5
         kubectl apply -f k8s/ingress.yaml --v=5
-        
