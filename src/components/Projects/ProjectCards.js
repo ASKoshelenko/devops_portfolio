@@ -13,7 +13,7 @@ function ProjectCards({
   demoLink, 
   isBlog, 
   skills = [], 
-  type,
+  // type,
   onSkillClick,
   activeSkill
 }) {
@@ -21,11 +21,11 @@ function ProjectCards({
     <Card className="project-card-view h-100">
       <Card.Img variant="top" src={imgPath} alt="card-img" />
       <Card.Body className="d-flex flex-column">
-        <div className="mb-2">
+        {/* <div className="mb-2">
           <Badge bg={type === 'project' ? 'primary' : 'secondary'}>
             {type === 'project' ? 'Project' : 'Task'}
           </Badge>
-        </div>
+        </div> */}
         <Card.Title>{title}</Card.Title>
         <Card.Text style={{ textAlign: "justify" }}>
           {description}

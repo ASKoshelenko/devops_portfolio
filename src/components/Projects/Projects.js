@@ -39,6 +39,247 @@ function Projects() {
 
   // Projects data moved inside the component
   const ITEMS_DATA = [
+    {
+      type: 'project',
+      imgPath: dockercompose, //azure, // Нужно добавить изображение
+      title: t('project_azure_infrastructure_title'),
+      description: t('project_azure_infrastructure_description'),
+      skills: ["Azure", "Terraform", "GitHub Actions", "CI/CD", "Microservices"],
+      ghLink: "", // Будет добавлено после создания репозитория
+    },
+    {
+      type: 'project',
+      imgPath: dockercompose, //aws,
+      title: t('project_aws_lambda_title'),
+      description: t('project_aws_lambda_description'),
+      skills: ["AWS Lambda", "Python", "Security", "Testing"],
+      ghLink: "",
+    },
+    {
+      type: 'project',
+      imgPath: dockercompose,//terraform,
+      title: t('project_terraform_infrastructure_title'),
+      description: t('project_terraform_infrastructure_description'),
+      skills: ["Terraform", "Infrastructure as Code", "Networking", "Security"],
+      ghLink: "",
+    },
+    {
+      type: 'project',
+      imgPath: dockercompose,//monitoring,
+      title: t('project_monitoring_solution_title'),
+      description: t('project_monitoring_solution_description'),
+      skills: ["Grafana", "Zabbix", "Monitoring", "Infrastructure"],
+      ghLink: "",
+    },
+    {
+      type: 'project',
+      imgPath: dockercompose,//automation,
+      title: t('project_infrastructure_automation_title'),
+      description: t('project_infrastructure_automation_description'),
+      skills: ["Ansible", "Docker", "Jenkins", "Proxmox", "Automation"],
+      ghLink: "",
+    },
+    {
+      type: 'project',
+      imgPath: phbt,
+      title: t('project_crm_system_title'),
+      description: t('project_crm_system_description'),
+      skills: ["React", "Firebase", "JavaScript", "CSS"],
+      ghLink: "https://github.com/ASKoshelenko/phbt",
+      demoLink: "https://crm-phbt.web.app/"
+    },
+    
+      // CI/CD & Kubernetes Projects
+    {
+      type: 'project',
+      imgPath: dockercompose,//cicd, // Нужно будет добавить изображение
+      title: t('project_bosch_cicd_title'),
+      description: t('project_bosch_cicd_description'),
+      skills: ["Jenkins", "Azure DevOps", "CI/CD", "Microservices", "Commercetools", "Terraform"],
+      ghLink: "", // Будет добавлен после создания репозитория
+    },
+    {
+      type: 'project',
+      imgPath: dockercompose,//kubernetes,
+      title: t('project_gcp_kubernetes_title'),
+      description: t('project_gcp_kubernetes_description'),
+      skills: ["GCP", "Kubernetes", "GKE", "Cloud Monitoring", "Cloud Logging", "Security"],
+      ghLink: "",
+    },
+    {
+      type: 'project',
+      imgPath: dockercompose,//security,
+      title: t('project_multicloud_security_title'),
+      description: t('project_multicloud_security_description'),
+      skills: ["GCP", "AWS", "Azure", "Security", "IAM", "Compliance"],
+      ghLink: "",
+    },
+    {
+      type: 'project',
+      imgPath: dockercompose,//terraform,
+      title: t('project_terraform_automation_title'),
+      description: t('project_terraform_automation_description'),
+      skills: ["Terraform", "Infrastructure as Code", "CI/CD", "Cloud", "Automation"],
+      ghLink: "",
+    },
+    {
+      type: 'project',
+      imgPath: dockercompose,//monitoring,
+      title: t('project_monitoring_platform_title'),
+      description: t('project_monitoring_platform_description'),
+      skills: ["Grafana", "Prometheus", "Monitoring", "Alerting", "DevOps"],
+      ghLink: "",
+    },
+    // Development Projects (оставляем существующие)
+    {
+      type: 'project',
+      imgPath: phbt,
+      title: t('project_phbt_title'),
+      description: t('project_phbt_description'),
+      skills: ["React", "Firebase", "JavaScript", "CSS"],
+      ghLink: "https://github.com/ASKoshelenko/phbt",
+      demoLink: "https://crm-phbt.web.app/",
+    },
+    // Tasks
+    {
+      type: 'task',
+      imgPath: dockercompose,//lambda,
+      title: t('task_lambda_migration_title'),
+      description: t('task_lambda_migration_description'),
+      skills: ["AWS Lambda", "Python", "CI/CD", "Testing"],
+      ghLink: "",
+    },
+    {
+      type: 'task',
+      imgPath: dockercompose,//terraform,
+      title: t('task_terraform_azure_title'),
+      description: t('task_terraform_azure_description'),
+      skills: ["Terraform", "Azure", "Infrastructure as Code", "Networking"],
+      ghLink: "",
+    },
+    {
+      type: 'task',
+      imgPath: dockercompose,//microservices,
+      title: t('task_microservices_deployment_title'),
+      description: t('task_microservices_deployment_description'),
+      skills: ["Microservices", "Kubernetes", "API Gateway", "Cloud Native"],
+      ghLink: "",
+    },
+    {
+      type: 'project',
+      imgPath: dockercompose,//azure, // Нужно будет добавить изображение
+      title: t('project_commercetools_backup_title'),
+      description: t('project_commercetools_backup_description'),
+      skills: [
+        "Azure Logic Apps",
+        "Commercetools",
+        "Azure Monitor",
+        "PowerShell",
+        "Azure Storage"
+      ],
+      ghLink: "", // Будет добавлен после создания репозитория
+    },
+    {
+      type: 'project',
+      imgPath: dockercompose,//git,
+      title: t('project_git_optimization_title'),
+      description: t('project_git_optimization_description'),
+      skills: [
+        "Git",
+        "GitLab",
+        "BitBucket",
+        "CI/CD",
+        "DevOps",
+        "Automation"
+      ],
+      ghLink: "",
+    },
+    {
+      type: 'project',
+      imgPath: dockercompose,//mach,
+      title: t('project_mach_deployment_title'),
+      description: t('project_mach_deployment_description'),
+      skills: [
+        "MACH",
+        "GitHub Actions",
+        "Microservices",
+        "Commercetools",
+        "Infrastructure as Code"
+      ],
+      ghLink: "",
+    },
+    // Добавляем новые задачи
+    {
+      type: 'task',
+      imgPath: dockercompose,//monitor,
+      title: t('task_backup_monitoring_title'),
+      description: t('task_backup_monitoring_description'),
+      skills: [
+        "Azure Monitor",
+        "Logic Apps",
+        "PowerShell",
+        "Monitoring"
+      ],
+      ghLink: "",
+    },
+    {
+      type: 'task',
+      imgPath: dockercompose,//git,
+      title: t('task_git_workflow_title'),
+      description: t('task_git_workflow_description'),
+      skills: [
+        "Git",
+        "CI/CD",
+        "Shell Scripting",
+        "Automation"
+      ],
+      ghLink: "",
+    },
+    {
+      type: 'task',
+      imgPath: dockercompose,//testing,
+      title: t('task_mach_testing_title'),
+      description: t('task_mach_testing_description'),
+      skills: [
+        "MACH",
+        "Testing",
+        "API",
+        "Microservices",
+        "Performance Testing"
+      ],
+      ghLink: "",
+    },
+    {
+      type: 'project',
+      imgPath: dockercompose,//gitSync, // Нужно будет добавить изображение
+      title: t('project_git_mirror_title'),
+      description: t('project_git_mirror_description'),
+      skills: [
+        "GitLab",
+        "BitBucket",
+        "Git",
+        "CI/CD",
+        "Security",
+        "Automation",
+        "Monitoring"
+      ],
+      ghLink: "", // Будет добавлен после создания репозитория
+    },
+    // Добавляем новую задачу
+    {
+      type: 'task',
+      imgPath: dockercompose,//monitoring,
+      title: t('task_mirror_monitoring_title'),
+      description: t('task_mirror_monitoring_description'),
+      skills: [
+        "Monitoring",
+        "Alerting",
+        "Shell Scripting",
+        "Git",
+        "Automation"
+      ],
+      ghLink: "",
+    },
     // Original DevOps Projects
     {
       type: 'project',
@@ -217,7 +458,7 @@ function Projects() {
         </h1>
 
         {/* Main filters */}
-        <div className="main-filters">
+        {/* <div className="main-filters">
           {projectTypes.map((type) => (
             <Button
               key={type}
@@ -227,7 +468,7 @@ function Projects() {
               {type === 'all' ? t('all') : t(`type_${type}`)}
             </Button>
           ))}
-        </div>
+        </div> */}
 
         {/* Category filters */}
         <div className="category-filters">
