@@ -69,6 +69,18 @@
   "select_en_resume": "English CV",
   "select_ua_resume": "Ukrainian CV",
   "footer_copywright_1": "Engineering Tomorrow's Solutions, Today",
-  "footer_copywright_2": "Copyright © {{year}} DevOpsDive"
-
+  "footer_copywright_2": "Copyright © {{year}} DevOpsDive",
+  "category_cloud": "Cloud Services",
+  "category_cicd": "CI/CD & Containers",
+  "category_monitoring": "Monitoring & Logging",
+  "category_iac": "Infrastructure as Code",
+  "category_security": "Security",
+  "category_automation": "Automation",
+  "category_infrastructure": "Infrastructure",
+  "active_filters": "Active filters",
+  "clear_all": "Clear all",
+  "showing_results": "Showing {{count}} results",
+  "no_results": "No projects found",
+  "try_different_filters": "Try different filters",
+  "reset_all_filters": "Reset all filters"
 }
