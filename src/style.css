@@ -598,7 +598,7 @@ button:focus {
   background-color: transparent;
   border: 1px solid #623686;
   color: white;
-  border-radius: 20px;
+  border-radius: 10px;
   transition: all 0.3s ease;
   font-size: 0.95em;
   min-width: 100px;
@@ -626,7 +626,7 @@ button:focus {
   justify-content: center;
   gap: 12px;
   padding: 20px;
-  background-color: rgba(35, 15, 89, 0.2);
+  /* background-color: rgba(35, 15, 89, 0.2); */
   border-radius: 15px;
   margin-bottom: 2rem;
 }
@@ -636,7 +636,7 @@ button:focus {
   background-color: transparent;
   border: 1px solid #623686;
   color: white;
-  border-radius: 20px;
+  border-radius: 10px;
   font-size: 0.9em;
   transition: all 0.3s ease;
   white-space: nowrap;
@@ -664,7 +664,7 @@ button:focus {
   flex-wrap: wrap;
   gap: 12px;
   padding: 15px 20px;
-  background-color: rgba(35, 15, 89, 0.2);
+  background-color: rgba(35, 15, 89, 0.1);
   border-radius: 10px;
   margin-bottom: 2rem;
 }
@@ -678,7 +678,7 @@ button:focus {
   padding: 6px 14px;
   background-color: #623686;
   color: white;
-  border-radius: 15px;
+  border-radius: 10px;
   font-size: 0.9em;
 }
 
@@ -727,7 +727,10 @@ button:focus {
   height: 100%;
   transition: transform 0.3s ease;
   box-shadow: 0 4px 5px 3px rgba(119, 53, 136, 0.459);
+  display: flex;
+  flex-direction: column;
 }
+
 
 .project-card-view:hover {
   transform: translateY(-5px);
@@ -737,13 +740,18 @@ button:focus {
 .project-card-view .card-img-top {
   border-radius: 15px 15px 0 0;
   height: 200px;
-  object-fit: cover;
+  object-fit: contain;
   padding: 20px;
   opacity: 0.8;
+  min-height: 200px;
+  max-height: 250px;
 }
 
 .project-card-view .card-body {
   padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .project-card-view .card-title {
@@ -797,7 +805,7 @@ button:focus {
   text-align: center;
   padding: 40px;
   background-color: rgba(35, 15, 89, 0.2);
-  border-radius: 15px;
+  border-radius: 10px;
   margin-top: 20px;
 }
 
@@ -815,7 +823,7 @@ button:focus {
   background-color: #623686;
   border: none;
   padding: 8px 24px;
-  border-radius: 20px;
+  border-radius: 10px;
   transition: all 0.3s ease;
   color: white;
   pointer-events: auto;

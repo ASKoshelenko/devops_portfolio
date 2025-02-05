@@ -20,152 +20,14 @@ import proxmox from "../../Assets/Projects/proxmox.png";
 
 // DevOps categories with their respective skills
 const CATEGORIES = {
-  'Cloud Services': ["AWS", "Azure", "GCP", "Cloud Storage"],
-  'CI/CD & Containers': ["Jenkins", "CI/CD", "Docker", "Kubernetes", "Git"],
-  'Monitoring & Logging': ["ELK Stack", "Prometheus", "Grafana", "Monitoring"],
-  'Infrastructure as Code': ["Terraform", "Ansible", "CloudFormation"],
-  'Security': ["Security", "SSL/TLS", "VPN"],
-  'Automation': ["Shell Scripting", "Python", "Automation"],
-  'Infrastructure': ["Networking", "Linux", "Virtualization", "Proxmox"]
+  category_cloud: ["AWS", "Azure", "GCP", "Cloud Storage"],
+  category_cicd: ["Jenkins", "CI/CD", "Docker", "Kubernetes", "Git"],
+  category_monitoring: ["ELK Stack", "Prometheus", "Grafana", "Monitoring"],
+  category_iac: ["Terraform", "Ansible", "CloudFormation"],
+  category_security: ["Security", "SSL/TLS", "VPN"],
+  category_automation: ["Shell Scripting", "Python", "Automation"],
+  category_infrastructure: ["Networking", "Linux", "Virtualization", "Proxmox"]
 };
-
-// Projects data
-const ITEMS_DATA = [
-  // Original DevOps Projects
-  {
-    type: 'project',
-    imgPath: jira,
-    title: "Jira Integration Project",
-    description: "Complex Jira integration project with automated workflows. Created automated workflows using REST API and Python scripts. Integrated with Slack for notifications and ticket management.",
-    skills: ["Python", "Automation", "REST API"],
-    ghLink: "",
-  },
-  {
-    type: 'project',
-    imgPath: dockercompose,
-    title: "Docker Infrastructure",
-    description: "Developed comprehensive Docker infrastructure for microservices architecture. Created and maintained Docker Compose configurations for development and staging environments.",
-    skills: ["Docker", "Docker Compose", "Microservices", "Networking"],
-    ghLink: "",
-  },
-  {
-    type: 'project',
-    imgPath: proxmox,
-    title: "Proxmox VE Cluster",
-    description: "Set up and managed Proxmox Virtual Environment cluster. Implemented high availability configuration and automated backup solutions.",
-    skills: ["Proxmox", "Virtualization", "Linux", "Networking"],
-    ghLink: "",
-  },
-  {
-    type: 'project',
-    imgPath: nginx,
-    title: "NGINX Load Balancer",
-    description: "Configured NGINX as a load balancer and reverse proxy for web applications. Implemented SSL termination and caching strategies.",
-    skills: ["Networking", "Security", "SSL/TLS"],
-    ghLink: "",
-  },
-  {
-    type: 'project',
-    imgPath: jenkins,
-    title: "CI/CD Pipeline with Jenkins",
-    description: "Implemented complete CI/CD pipeline using Jenkins, including automated testing, building, and deployment processes.",
-    skills: ["Jenkins", "CI/CD", "Docker", "Git", "Shell Scripting"],
-    ghLink: "",
-  },
-
-  // Development Projects
-  {
-    type: 'project',
-    imgPath: phbt,
-    title: "PHBT CRM System",
-    description: "Developed a custom CRM system for business task management and client tracking.",
-    skills: ["React", "Firebase", "JavaScript", "CSS"],
-    ghLink: "https://github.com/ASKoshelenko/phbt",
-    demoLink: "https://crm-phbt.web.app/",
-  },
-  {
-    type: 'project',
-    imgPath: landing,
-    title: "Responsive Landing Page",
-    description: "Created a modern responsive landing page with animations and optimized performance.",
-    skills: ["HTML", "CSS", "JavaScript"],
-    ghLink: "https://github.com/ASKoshelenko/Landing-page#readme",
-  },
-  {
-    type: 'project',
-    imgPath: foxtar,
-    title: "Foxtar Marketplace",
-    description: "Built a multi-page marketplace platform with user authentication and product management.",
-    skills: ["React", "Redux", "Node.js", "MongoDB"],
-    ghLink: "https://github.com/ASKoshelenko/Project-Store#readme",
-  },
-  {
-    type: 'project',
-    imgPath: calc,
-    title: "JavaScript Calculator",
-    description: "Implemented a fully functional calculator with advanced mathematical operations.",
-    skills: ["JavaScript", "HTML", "CSS"],
-    ghLink: "https://github.com/ASKoshelenko/calculator",
-  },
-  {
-    type: 'project',
-    imgPath: chess,
-    title: "React Chess Game",
-    description: "Developed a chess game with move validation and game state management.",
-    skills: ["React", "TypeScript"],
-    ghLink: "https://github.com/ASKoshelenko/chess#readme",
-  },
-  {
-    type: 'project',
-    imgPath: fakestore,
-    title: "E-commerce Platform",
-    description: "Created an e-commerce platform using Fake Store API with shopping cart functionality.",
-    skills: ["React", "REST API"],
-    ghLink: "https://github.com/ASKoshelenko/fakeStoreAPI#readme",
-  },
-  {
-    type: 'project',
-    imgPath: git,
-    title: "GitHub User Search",
-    description: "Built a GitHub user search application using GitHub's REST API.",
-    skills: ["React", "REST API", "GitHub API"],
-    ghLink: "https://github.com/ASKoshelenko/react_githubSearch#readme",
-  },
-
-  // DevOps Tasks
-  {
-    type: 'task',
-    imgPath: dockercompose,
-    title: "Kubernetes Deployment",
-    description: "Set up Kubernetes cluster and deployed microservices with auto-scaling and monitoring.",
-    skills: ["Kubernetes", "Docker", "Monitoring"],
-    ghLink: "",
-  },
-  {
-    type: 'task',
-    imgPath: jenkins,
-    title: "AWS Infrastructure Setup",
-    description: "Implemented AWS infrastructure using Terraform, including VPC, EC2, and RDS setups.",
-    skills: ["AWS", "Terraform", "Infrastructure as Code"],
-    ghLink: "",
-  },
-  {
-    type: 'task',
-    imgPath: nginx,
-    title: "ELK Stack Implementation",
-    description: "Implemented ELK stack for centralized logging and monitoring of applications.",
-    skills: ["ELK Stack", "Monitoring", "Docker"],
-    ghLink: "",
-  },
-  {
-    type: 'task',
-    imgPath: proxmox,
-    title: "Cloud Migration Project",
-    description: "Migrated on-premise applications to cloud platform using Infrastructure as Code.",
-    skills: ["AWS", "Azure", "Terraform", "CloudFormation"],
-    ghLink: "",
-  }
-];
 
 function Projects() {
   const { t } = useTranslation();
@@ -173,12 +35,148 @@ function Projects() {
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [selectedSkill, setSelectedSkill] = useState(null);
 
-  // Function to check if a project has skills from selected category
+  const projectTypes = ['all', 'project', 'task'];
+
+  // Projects data moved inside the component
+  const ITEMS_DATA = [
+    // Original DevOps Projects
+    {
+      type: 'project',
+      imgPath: jira,
+      title: t('project_jira_title'),
+      description: t('project_jira_description'),
+      skills: ["Python", "Automation", "REST API"],
+      ghLink: "",
+    },
+    {
+      type: 'project',
+      imgPath: dockercompose,
+      title: t('project_docker_compose_title'),
+      description: t('project_docker_compose_description'),
+      skills: ["Docker", "Docker Compose", "Microservices", "Networking"],
+      ghLink: "",
+    },
+    {
+      type: 'project',
+      imgPath: proxmox,
+      title: t('project_proxmox_title'),
+      description: t('project_proxmox_description'),
+      skills: ["Proxmox", "Virtualization", "Linux", "Networking"],
+      ghLink: "",
+    },
+    {
+      type: 'project',
+      imgPath: nginx,
+      title: t('project_nginx_title'),
+      description: t('project_nginx_description'),
+      skills: ["Networking", "Security", "SSL/TLS"],
+      ghLink: "",
+    },
+    {
+      type: 'project',
+      imgPath: jenkins,
+      title: t('project_jenkins_title'),
+      description: t('project_jenkins_description'),
+      skills: ["Jenkins", "CI/CD", "Docker", "Git", "Shell Scripting"],
+      ghLink: "",
+    },
+    // Development Projects
+    {
+      type: 'project',
+      imgPath: phbt,
+      title: t('project_phbt_title'),
+      description: t('project_phbt_description'),
+      skills: ["React", "Firebase", "JavaScript", "CSS"],
+      ghLink: "https://github.com/ASKoshelenko/phbt",
+      demoLink: "https://crm-phbt.web.app/",
+    },
+    {
+      type: 'project',
+      imgPath: landing,
+      title: t('project_landing_title'),
+      description: t('project_landing_description'),
+      skills: ["HTML", "CSS", "JavaScript"],
+      ghLink: "https://github.com/ASKoshelenko/Landing-page#readme",
+    },
+    {
+      type: 'project',
+      imgPath: foxtar,
+      title: t('project_multipage_title'),
+      description: t('project_multipage_description'),
+      skills: ["React", "Redux", "Node.js", "MongoDB"],
+      ghLink: "https://github.com/ASKoshelenko/Project-Store#readme",
+    },
+    {
+      type: 'project',
+      imgPath: calc,
+      title: t('project_calculator_title'),
+      description: t('project_calculator_description'),
+      skills: ["JavaScript", "HTML", "CSS"],
+      ghLink: "https://github.com/ASKoshelenko/calculator",
+    },
+    {
+      type: 'project',
+      imgPath: chess,
+      title: t('project_chess_title'),
+      description: t('project_chess_description'),
+      skills: ["React", "TypeScript"],
+      ghLink: "https://github.com/ASKoshelenko/chess#readme",
+    },
+    {
+      type: 'project',
+      imgPath: fakestore,
+      title: t('project_fakestore_title'),
+      description: t('project_fakestore_description'),
+      skills: ["React", "REST API"],
+      ghLink: "https://github.com/ASKoshelenko/fakeStoreAPI#readme",
+    },
+    {
+      type: 'project',
+      imgPath: git,
+      title: t('project_searchapp_title'),
+      description: t('project_searchapp_description'),
+      skills: ["React", "REST API", "GitHub API"],
+      ghLink: "https://github.com/ASKoshelenko/react_githubSearch#readme",
+    },
+    // DevOps Tasks
+    {
+      type: 'task',
+      imgPath: dockercompose,
+      title: t('task_kubernetes_title'),
+      description: t('task_kubernetes_description'),
+      skills: ["Kubernetes", "Docker", "Monitoring"],
+      ghLink: "",
+    },
+    {
+      type: 'task',
+      imgPath: jenkins,
+      title: t('task_aws_title'),
+      description: t('task_aws_description'),
+      skills: ["AWS", "Terraform", "Infrastructure as Code"],
+      ghLink: "",
+    },
+    {
+      type: 'task',
+      imgPath: nginx,
+      title: t('task_elk_title'),
+      description: t('task_elk_description'),
+      skills: ["ELK Stack", "Monitoring", "Docker"],
+      ghLink: "",
+    },
+    {
+      type: 'task',
+      imgPath: proxmox,
+      title: t('task_cloud_migration_title'),
+      description: t('task_cloud_migration_description'),
+      skills: ["AWS", "Azure", "Terraform", "CloudFormation"],
+      ghLink: "",
+    }
+  ];
+
   const hasSkillsFromCategory = (projectSkills, category) => {
     return projectSkills.some(skill => CATEGORIES[category]?.includes(skill));
   };
 
-  // Filtered items based on all selected filters
   const filteredItems = useMemo(() => {
     return ITEMS_DATA.filter(item => {
       const matchesType = selectedType === 'all' || item.type === selectedType;
@@ -215,18 +213,18 @@ function Projects() {
       <Particle />
       <Container>
         <h1 className="project-heading">
-          Featured <strong className="purple">Projects</strong>
+          {t('projects_my_recent_works')}
         </h1>
 
         {/* Main filters */}
         <div className="main-filters">
-          {['all', 'project', 'task'].map((type) => (
+          {projectTypes.map((type) => (
             <Button
               key={type}
               onClick={() => handleTypeClick(type)}
               className={`btn ${selectedType === type ? 'active' : ''}`}
             >
-              {type}
+              {type === 'all' ? t('all') : t(`type_${type}`)}
             </Button>
           ))}
         </div>
@@ -239,7 +237,7 @@ function Projects() {
               onClick={() => handleCategoryClick(category)}
               className={`btn ${selectedCategory === category ? 'active' : ''}`}
             >
-              {category}
+              {t(category)}
             </Button>
           ))}
         </div>
@@ -247,12 +245,12 @@ function Projects() {
         {/* Active filters */}
         {(selectedType !== 'all' || selectedCategory || selectedSkill) && (
           <div className="active-filters">
-            <span className="active-filters-label">Active filters:</span>
+            <span className="active-filters-label">{t('active_filters')}:</span>
             {selectedType !== 'all' && (
-              <span className="filter-tag">{selectedType}</span>
+              <span className="filter-tag">{t(`type_${selectedType}`)}</span>
             )}
             {selectedCategory && (
-              <span className="filter-tag">{selectedCategory}</span>
+              <span className="filter-tag">{t(selectedCategory)}</span>
             )}
             {selectedSkill && (
               <span className="filter-tag">{selectedSkill}</span>
@@ -262,14 +260,14 @@ function Projects() {
               className="clear-filters"
               onClick={handleReset}
             >
-              Clear all
+              {t('clear_all')}
             </Button>
           </div>
         )}
 
         {/* Results count */}
         <div className="results-count">
-          showing {filteredItems.length} results
+          {t('showing_results', { count: filteredItems.length })}
         </div>
 
         {/* Projects grid */}
@@ -289,13 +287,13 @@ function Projects() {
         {/* No results message */}
         {filteredItems.length === 0 && (
           <div className="no-results">
-            <h3>No projects found</h3>
-            <p>Try different filters or reset current selection</p>
+            <h3>{t('no_results')}</h3>
+            <p>{t('try_different_filters')}</p>
             <Button 
               className="reset-button"
               onClick={handleReset}
             >
-              Reset all filters
+              {t('reset_all_filters')}
             </Button>
           </div>
         )}

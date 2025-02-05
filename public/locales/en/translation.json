@@ -70,6 +70,9 @@
   "select_ua_resume": "Ukrainian CV",
   "footer_copywright_1": "Engineering Tomorrow's Solutions, Today",
   "footer_copywright_2": "Copyright © {{year}} DevOpsDive",
+  "all": "All",
+  "type_project": "Project",
+  "type_task": "Task",
   "category_cloud": "Cloud Services",
   "category_cicd": "CI/CD & Containers",
   "category_monitoring": "Monitoring & Logging",
@@ -82,5 +85,13 @@
   "showing_results": "Showing {{count}} results",
   "no_results": "No projects found",
   "try_different_filters": "Try different filters",
-  "reset_all_filters": "Reset all filters"
+  "reset_all_filters": "Reset all filters",
+  "task_kubernetes_title": "Kubernetes Deployment",
+  "task_kubernetes_description": "Set up Kubernetes cluster and deployed microservices with auto-scaling and monitoring.",
+  "task_aws_title": "AWS Infrastructure Setup",
+  "task_aws_description": "Implemented AWS infrastructure using Terraform, including VPC, EC2, and RDS setups.",
+  "task_elk_title": "ELK Stack Implementation",
+  "task_elk_description": "Implemented ELK stack for centralized logging and monitoring of applications.",
+  "task_cloud_migration_title": "Cloud Migration Project",
+  "task_cloud_migration_description": "Migrated on-premise applications to cloud platform using Infrastructure as Code."
 }
