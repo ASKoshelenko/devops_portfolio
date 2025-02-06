@@ -528,6 +528,14 @@ function Projects() {
   },
   {
     type: 'project',
+    imgPath: jira,
+    title: t('project_jira_title'),
+    description: t('project_jira_description'),
+    skills: ["React", "Firebase", "JavaScript", "CSS"],
+    ghLink: "",
+  },
+  {
+    type: 'project',
     imgPath: landing,
     title: t('project_landing_title'),
     description: t('project_landing_description'),
