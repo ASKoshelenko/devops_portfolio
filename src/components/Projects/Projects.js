@@ -20,13 +20,52 @@ import proxmox from "../../Assets/Projects/proxmox.png";
 
 // DevOps categories with their respective skills
 const CATEGORIES = {
-  category_cloud: ["AWS", "Azure", "GCP", "Cloud Storage"],
-  category_cicd: ["Jenkins", "CI/CD", "Docker", "Kubernetes", "Git"],
-  category_monitoring: ["ELK Stack", "Prometheus", "Grafana", "Monitoring"],
-  category_iac: ["Terraform", "Ansible", "CloudFormation"],
-  category_security: ["Security", "SSL/TLS", "VPN"],
-  category_automation: ["Shell Scripting", "Python", "Automation"],
-  category_infrastructure: ["Networking", "Linux", "Virtualization", "Proxmox"]
+  category_cloud_engineering: [
+    "AWS", "Azure", "GCP",
+    "Cloud Architecture",
+    "Cost Optimization",
+    "Cloud Security",
+    "Serverless"
+  ],
+  
+  category_containerization: [
+    "Kubernetes", "GKE",
+    "Docker", "Docker Compose",
+    "Microservices",
+    "Container Security",
+    "Service Mesh"
+  ],
+
+  category_automation_cicd: [
+    "Jenkins", "GitHub Actions",
+    "Azure DevOps", "GitLab CI",
+    "CI/CD", "Pipeline Automation",
+    "Commercetools"
+  ],
+
+  category_infrastructure: [
+    "Terraform", "Ansible",
+    "Infrastructure as Code",
+    "Networking",
+    "Load Balancing",
+    "High Availability",
+    "Proxmox"
+  ],
+
+  category_monitoring_reliability: [
+    "Prometheus", "Grafana",
+    "Zabbix", "Monitoring",
+    "Incident Response",
+    "SLA Management",
+    "Performance"
+  ],
+
+  category_security: [
+    "IAM", "Security Groups",
+    "SSL/TLS", "VPN",
+    "IAP", "Compliance",
+    "Access Management"
+  ]
 };
 
 function Projects() {
@@ -39,262 +78,65 @@ function Projects() {
 
   // Projects data moved inside the component
   const ITEMS_DATA = [
+    // Cloud Engineering Projects
     {
       type: 'project',
-      imgPath: dockercompose, //azure, // Нужно добавить изображение
-      title: t('project_azure_infrastructure_title'),
-      description: t('project_azure_infrastructure_description'),
-      skills: ["Azure", "Terraform", "GitHub Actions", "CI/CD", "Microservices"],
-      ghLink: "", // Будет добавлено после создания репозитория
-    },
-    {
-      type: 'project',
-      imgPath: dockercompose, //aws,
-      title: t('project_aws_lambda_title'),
-      description: t('project_aws_lambda_description'),
-      skills: ["AWS Lambda", "Python", "Security", "Testing"],
-      ghLink: "",
-    },
-    {
-      type: 'project',
-      imgPath: dockercompose,//terraform,
-      title: t('project_terraform_infrastructure_title'),
-      description: t('project_terraform_infrastructure_description'),
-      skills: ["Terraform", "Infrastructure as Code", "Networking", "Security"],
-      ghLink: "",
-    },
-    {
-      type: 'project',
-      imgPath: dockercompose,//monitoring,
-      title: t('project_monitoring_solution_title'),
-      description: t('project_monitoring_solution_description'),
-      skills: ["Grafana", "Zabbix", "Monitoring", "Infrastructure"],
-      ghLink: "",
-    },
-    {
-      type: 'project',
-      imgPath: dockercompose,//automation,
-      title: t('project_infrastructure_automation_title'),
-      description: t('project_infrastructure_automation_description'),
-      skills: ["Ansible", "Docker", "Jenkins", "Proxmox", "Automation"],
-      ghLink: "",
-    },
-    {
-      type: 'project',
-      imgPath: phbt,
-      title: t('project_crm_system_title'),
-      description: t('project_crm_system_description'),
-      skills: ["React", "Firebase", "JavaScript", "CSS"],
-      ghLink: "https://github.com/ASKoshelenko/phbt",
-      demoLink: "https://crm-phbt.web.app/"
-    },
-    
-      // CI/CD & Kubernetes Projects
-    {
-      type: 'project',
-      imgPath: dockercompose,//cicd, // Нужно будет добавить изображение
-      title: t('project_bosch_cicd_title'),
-      description: t('project_bosch_cicd_description'),
-      skills: ["Jenkins", "Azure DevOps", "CI/CD", "Microservices", "Commercetools", "Terraform"],
-      ghLink: "", // Будет добавлен после создания репозитория
-    },
-    {
-      type: 'project',
-      imgPath: dockercompose,//kubernetes,
-      title: t('project_gcp_kubernetes_title'),
-      description: t('project_gcp_kubernetes_description'),
-      skills: ["GCP", "Kubernetes", "GKE", "Cloud Monitoring", "Cloud Logging", "Security"],
-      ghLink: "",
-    },
-    {
-      type: 'project',
-      imgPath: dockercompose,//security,
-      title: t('project_multicloud_security_title'),
-      description: t('project_multicloud_security_description'),
-      skills: ["GCP", "AWS", "Azure", "Security", "IAM", "Compliance"],
-      ghLink: "",
-    },
-    {
-      type: 'project',
-      imgPath: dockercompose,//terraform,
-      title: t('project_terraform_automation_title'),
-      description: t('project_terraform_automation_description'),
-      skills: ["Terraform", "Infrastructure as Code", "CI/CD", "Cloud", "Automation"],
-      ghLink: "",
-    },
-    {
-      type: 'project',
-      imgPath: dockercompose,//monitoring,
-      title: t('project_monitoring_platform_title'),
-      description: t('project_monitoring_platform_description'),
-      skills: ["Grafana", "Prometheus", "Monitoring", "Alerting", "DevOps"],
-      ghLink: "",
-    },
-    // Development Projects (оставляем существующие)
-    {
-      type: 'project',
-      imgPath: phbt,
-      title: t('project_phbt_title'),
-      description: t('project_phbt_description'),
-      skills: ["React", "Firebase", "JavaScript", "CSS"],
-      ghLink: "https://github.com/ASKoshelenko/phbt",
-      demoLink: "https://crm-phbt.web.app/",
-    },
-    // Tasks
-    {
-      type: 'task',
-      imgPath: dockercompose,//lambda,
-      title: t('task_lambda_migration_title'),
-      description: t('task_lambda_migration_description'),
-      skills: ["AWS Lambda", "Python", "CI/CD", "Testing"],
-      ghLink: "",
-    },
-    {
-      type: 'task',
-      imgPath: dockercompose,//terraform,
-      title: t('task_terraform_azure_title'),
-      description: t('task_terraform_azure_description'),
-      skills: ["Terraform", "Azure", "Infrastructure as Code", "Networking"],
-      ghLink: "",
-    },
-    {
-      type: 'task',
-      imgPath: dockercompose,//microservices,
-      title: t('task_microservices_deployment_title'),
-      description: t('task_microservices_deployment_description'),
-      skills: ["Microservices", "Kubernetes", "API Gateway", "Cloud Native"],
-      ghLink: "",
-    },
-    {
-      type: 'project',
-      imgPath: dockercompose,//azure, // Нужно будет добавить изображение
-      title: t('project_commercetools_backup_title'),
-      description: t('project_commercetools_backup_description'),
+      imgPath: dockercompose,
+      title: t('project_gke_migration_title'),
+      description: t('project_gke_migration_description'),
       skills: [
-        "Azure Logic Apps",
-        "Commercetools",
-        "Azure Monitor",
-        "PowerShell",
-        "Azure Storage"
+        "GCP",
+        "Cloud Architecture",
+        "Cost Optimization",
+        "Kubernetes",
+        "Container Security",
+        "Microservices"
       ],
-      ghLink: "", // Будет добавлен после создания репозитория
-    },
-    {
-      type: 'project',
-      imgPath: dockercompose,//git,
-      title: t('project_git_optimization_title'),
-      description: t('project_git_optimization_description'),
-      skills: [
-        "Git",
-        "GitLab",
-        "BitBucket",
-        "CI/CD",
-        "DevOps",
-        "Automation"
-      ],
-      ghLink: "",
-    },
-    {
-      type: 'project',
-      imgPath: dockercompose,//mach,
-      title: t('project_mach_deployment_title'),
-      description: t('project_mach_deployment_description'),
-      skills: [
-        "MACH",
-        "GitHub Actions",
-        "Microservices",
-        "Commercetools",
-        "Infrastructure as Code"
-      ],
-      ghLink: "",
-    },
-    // Добавляем новые задачи
-    {
-      type: 'task',
-      imgPath: dockercompose,//monitor,
-      title: t('task_backup_monitoring_title'),
-      description: t('task_backup_monitoring_description'),
-      skills: [
-        "Azure Monitor",
-        "Logic Apps",
-        "PowerShell",
-        "Monitoring"
-      ],
-      ghLink: "",
-    },
-    {
-      type: 'task',
-      imgPath: dockercompose,//git,
-      title: t('task_git_workflow_title'),
-      description: t('task_git_workflow_description'),
-      skills: [
-        "Git",
-        "CI/CD",
-        "Shell Scripting",
-        "Automation"
-      ],
-      ghLink: "",
-    },
-    {
-      type: 'task',
-      imgPath: dockercompose,//testing,
-      title: t('task_mach_testing_title'),
-      description: t('task_mach_testing_description'),
-      skills: [
-        "MACH",
-        "Testing",
-        "API",
-        "Microservices",
-        "Performance Testing"
-      ],
-      ghLink: "",
-    },
-    {
-      type: 'project',
-      imgPath: dockercompose,//gitSync, // Нужно будет добавить изображение
-      title: t('project_git_mirror_title'),
-      description: t('project_git_mirror_description'),
-      skills: [
-        "GitLab",
-        "BitBucket",
-        "Git",
-        "CI/CD",
-        "Security",
-        "Automation",
-        "Monitoring"
-      ],
-      ghLink: "", // Будет добавлен после создания репозитория
-    },
-    // Добавляем новую задачу
-    {
-      type: 'task',
-      imgPath: dockercompose,//monitoring,
-      title: t('task_mirror_monitoring_title'),
-      description: t('task_mirror_monitoring_description'),
-      skills: [
-        "Monitoring",
-        "Alerting",
-        "Shell Scripting",
-        "Git",
-        "Automation"
-      ],
-      ghLink: "",
-    },
-    // Original DevOps Projects
-    {
-      type: 'project',
-      imgPath: jira,
-      title: t('project_jira_title'),
-      description: t('project_jira_description'),
-      skills: ["Python", "Automation", "REST API"],
       ghLink: "",
     },
     {
       type: 'project',
       imgPath: dockercompose,
-      title: t('project_docker_compose_title'),
-      description: t('project_docker_compose_description'),
-      skills: ["Docker", "Docker Compose", "Microservices", "Networking"],
+      title: t('project_azure_infrastructure_title'),
+      description: t('project_azure_infrastructure_description'),
+      skills: [
+        "Azure",
+        "Cloud Architecture",
+        "High Availability",
+        "Infrastructure as Code",
+        "Terraform",
+        "Cost Optimization"
+      ],
+      ghLink: "",
+    },
+    {
+      type: 'project',
+      imgPath: dockercompose,
+      title: t('project_aws_lambda_title'),
+      description: t('project_aws_lambda_description'),
+      skills: [
+        "AWS",
+        "Serverless",
+        "Cloud Architecture",
+        "Cost Optimization",
+        "High Availability",
+        "Security"
+      ],
+      ghLink: "",
+    },
+    {
+      type: 'project',
+      imgPath: dockercompose,
+      title: t('project_terraform_infrastructure_title'),
+      description: t('project_terraform_infrastructure_description'),
+      skills: [
+        "Infrastructure as Code",
+        "Terraform",
+        "High Availability",
+        "Cloud Architecture",
+        "Networking",
+        "Security"
+      ],
       ghLink: "",
     },
     {
@@ -302,15 +144,63 @@ function Projects() {
       imgPath: proxmox,
       title: t('project_proxmox_title'),
       description: t('project_proxmox_description'),
-      skills: ["Proxmox", "Virtualization", "Linux", "Networking"],
+      skills: [
+        "Infrastructure as Code",
+        "High Availability",
+        "Virtualization",
+        "Networking",
+        "Proxmox",
+        "Load Balancing"
+      ],
+      ghLink: "",
+    },
+  
+    // Containerization Projects
+    {
+      type: 'project',
+      imgPath: dockercompose,
+      title: t('project_gcp_kubernetes_title'),
+      description: t('project_gcp_kubernetes_description'),
+      skills: [
+        "Kubernetes",
+        "GKE",
+        "Container Security",
+        "Service Mesh",
+        "Docker",
+        "Microservices"
+      ],
       ghLink: "",
     },
     {
       type: 'project',
-      imgPath: nginx,
-      title: t('project_nginx_title'),
-      description: t('project_nginx_description'),
-      skills: ["Networking", "Security", "SSL/TLS"],
+      imgPath: dockercompose,
+      title: t('project_docker_compose_title'),
+      description: t('project_docker_compose_description'),
+      skills: [
+        "Docker",
+        "Docker Compose",
+        "Container Security",
+        "Microservices",
+        "Service Mesh",
+        "Container Registry"
+      ],
+      ghLink: "",
+    },
+  
+    // Automation & CI/CD Projects
+    {
+      type: 'project',
+      imgPath: dockercompose,
+      title: t('project_bosch_cicd_title'),
+      description: t('project_bosch_cicd_description'),
+      skills: [
+        "Jenkins",
+        "Azure DevOps",
+        "Pipeline Automation",
+        "CI/CD",
+        "GitHub Actions",
+        "GitLab CI"
+      ],
       ghLink: "",
     },
     {
@@ -318,101 +208,373 @@ function Projects() {
       imgPath: jenkins,
       title: t('project_jenkins_title'),
       description: t('project_jenkins_description'),
-      skills: ["Jenkins", "CI/CD", "Docker", "Git", "Shell Scripting"],
+      skills: [
+        "Jenkins",
+        "Pipeline Automation",
+        "CI/CD",
+        "Docker",
+        "GitLab CI",
+        "GitHub Actions"
+      ],
       ghLink: "",
     },
-    // Development Projects
-    {
-      type: 'project',
-      imgPath: phbt,
-      title: t('project_phbt_title'),
-      description: t('project_phbt_description'),
-      skills: ["React", "Firebase", "JavaScript", "CSS"],
-      ghLink: "https://github.com/ASKoshelenko/phbt",
-      demoLink: "https://crm-phbt.web.app/",
-    },
-    {
-      type: 'project',
-      imgPath: landing,
-      title: t('project_landing_title'),
-      description: t('project_landing_description'),
-      skills: ["HTML", "CSS", "JavaScript"],
-      ghLink: "https://github.com/ASKoshelenko/Landing-page#readme",
-    },
-    {
-      type: 'project',
-      imgPath: foxtar,
-      title: t('project_multipage_title'),
-      description: t('project_multipage_description'),
-      skills: ["React", "Redux", "Node.js", "MongoDB"],
-      ghLink: "https://github.com/ASKoshelenko/Project-Store#readme",
-    },
-    {
-      type: 'project',
-      imgPath: calc,
-      title: t('project_calculator_title'),
-      description: t('project_calculator_description'),
-      skills: ["JavaScript", "HTML", "CSS"],
-      ghLink: "https://github.com/ASKoshelenko/calculator",
-    },
-    {
-      type: 'project',
-      imgPath: chess,
-      title: t('project_chess_title'),
-      description: t('project_chess_description'),
-      skills: ["React", "TypeScript"],
-      ghLink: "https://github.com/ASKoshelenko/chess#readme",
-    },
-    {
-      type: 'project',
-      imgPath: fakestore,
-      title: t('project_fakestore_title'),
-      description: t('project_fakestore_description'),
-      skills: ["React", "REST API"],
-      ghLink: "https://github.com/ASKoshelenko/fakeStoreAPI#readme",
-    },
-    {
-      type: 'project',
-      imgPath: git,
-      title: t('project_searchapp_title'),
-      description: t('project_searchapp_description'),
-      skills: ["React", "REST API", "GitHub API"],
-      ghLink: "https://github.com/ASKoshelenko/react_githubSearch#readme",
-    },
-    // DevOps Tasks
-    {
-      type: 'task',
-      imgPath: dockercompose,
-      title: t('task_kubernetes_title'),
-      description: t('task_kubernetes_description'),
-      skills: ["Kubernetes", "Docker", "Monitoring"],
-      ghLink: "",
-    },
-    {
-      type: 'task',
-      imgPath: jenkins,
-      title: t('task_aws_title'),
-      description: t('task_aws_description'),
-      skills: ["AWS", "Terraform", "Infrastructure as Code"],
-      ghLink: "",
-    },
-    {
-      type: 'task',
-      imgPath: nginx,
-      title: t('task_elk_title'),
-      description: t('task_elk_description'),
-      skills: ["ELK Stack", "Monitoring", "Docker"],
-      ghLink: "",
-    },
-    {
-      type: 'task',
-      imgPath: proxmox,
-      title: t('task_cloud_migration_title'),
-      description: t('task_cloud_migration_description'),
-      skills: ["AWS", "Azure", "Terraform", "CloudFormation"],
-      ghLink: "",
-    }
-  ];
+    // Security & Compliance Projects
+  {
+    type: 'project',
+    imgPath: dockercompose,
+    title: t('project_multicloud_security_title'),
+    description: t('project_multicloud_security_description'),
+    skills: [
+      "IAM",
+      "Security Groups",
+      "Compliance",
+      "Access Management",
+      "Cloud Security",
+      "VPN"
+    ],
+    ghLink: "",
+  },
+  {
+    type: 'project',
+    imgPath: dockercompose,
+    title: t('project_network_security_title'),
+    description: t('project_network_security_description'),
+    skills: [
+      "Security Groups",
+      "IAP",
+      "Cloud Security",
+      "Access Management",
+      "Compliance",
+      "Networking"
+    ],
+    ghLink: "",
+  },
+  {
+    type: 'project',
+    imgPath: nginx,
+    title: t('project_nginx_title'),
+    description: t('project_nginx_description'),
+    skills: [
+      "SSL/TLS",
+      "Security Groups",
+      "Access Management",
+      "Networking",
+      "High Availability",
+      "Load Balancing"
+    ],
+    ghLink: "",
+  },
+
+  // Monitoring & Reliability Projects
+  {
+    type: 'project',
+    imgPath: dockercompose,
+    title: t('project_monitoring_platform_title'),
+    description: t('project_monitoring_platform_description'),
+    skills: [
+      "Prometheus",
+      "Grafana",
+      "Incident Response",
+      "SLA Management",
+      "Performance",
+      "Alerting"
+    ],
+    ghLink: "",
+  },
+  {
+    type: 'project',
+    imgPath: dockercompose,
+    title: t('project_monitoring_solution_title'),
+    description: t('project_monitoring_solution_description'),
+    skills: [
+      "Grafana",
+      "Zabbix",
+      "Performance",
+      "Incident Response",
+      "SLA Management",
+      "Alerting"
+    ],
+    ghLink: "",
+  },
+  {
+    type: 'project',
+    imgPath: dockercompose,
+    title: t('task_elk_title'),
+    description: t('task_elk_description'),
+    skills: [
+      "ELK Stack",
+      "Performance",
+      "Monitoring",
+      "Incident Response",
+      "Alerting",
+      "SLA Management"
+    ],
+    ghLink: "",
+  },
+
+  // Cloud Services & Integration Projects
+  {
+    type: 'project',
+    imgPath: dockercompose,
+    title: t('project_commercetools_backup_title'),
+    description: t('project_commercetools_backup_description'),
+    skills: [
+      "Azure",
+      "Azure Logic Apps",
+      "Cloud Architecture",
+      "Azure Storage",
+      "High Availability",
+      "Azure Monitor"
+    ],
+    ghLink: "",
+  },
+  {
+    type: 'project',
+    imgPath: dockercompose,
+    title: t('project_cloud_migration_title'),
+    description: t('project_cloud_migration_description'),
+    skills: [
+      "AWS",
+      "Azure",
+      "Cloud Architecture",
+      "Infrastructure as Code",
+      "Cost Optimization",
+      "High Availability"
+    ],
+    ghLink: "",
+  },
+  {
+    type: 'project',
+    imgPath: dockercompose,
+    title: t('project_canary_deployment_title'),
+    description: t('project_canary_deployment_description'),
+    skills: [
+      "Cloud Run",
+      "GCP",
+      "CI/CD",
+      "Container Security",
+      "Monitoring",
+      "High Availability"
+    ],
+    ghLink: "",
+  },
+
+  // DevOps Automation Tasks
+  {
+    type: 'task',
+    imgPath: dockercompose,
+    title: t('task_lambda_migration_title'),
+    description: t('task_lambda_migration_description'),
+    skills: [
+      "AWS Lambda",
+      "Serverless",
+      "CI/CD",
+      "Cloud Architecture",
+      "Performance",
+      "Security"
+    ],
+    ghLink: "",
+  },
+  {
+    type: 'task',
+    imgPath: dockercompose,
+    title: t('task_terraform_azure_title'),
+    description: t('task_terraform_azure_description'),
+    skills: [
+      "Terraform",
+      "Azure",
+      "Infrastructure as Code",
+      "High Availability",
+      "Networking",
+      "Cloud Architecture"
+    ],
+    ghLink: "",
+  },
+
+  // Git & Version Control Projects
+  {
+    type: 'project',
+    imgPath: dockercompose,
+    title: t('project_git_mirror_title'),
+    description: t('project_git_mirror_description'),
+    skills: [
+      "GitLab CI",
+      "Pipeline Automation",
+      "CI/CD",
+      "Security",
+      "Access Management",
+      "High Availability"
+    ],
+    ghLink: "",
+  },
+  {
+    type: 'project',
+    imgPath: dockercompose,
+    title: t('project_git_optimization_title'),
+    description: t('project_git_optimization_description'),
+    skills: [
+      "Git",
+      "GitLab",
+      "BitBucket",
+      "CI/CD",
+      "Pipeline Automation",
+      "Access Management"
+    ],
+    ghLink: "",
+  },
+  // Additional DevOps Tasks
+  {
+    type: 'task',
+    imgPath: dockercompose,
+    title: t('task_microservices_deployment_title'),
+    description: t('task_microservices_deployment_description'),
+    skills: [
+      "Kubernetes",
+      "Microservices",
+      "Service Mesh",
+      "Container Security",
+      "API Gateway",
+      "Cloud Native"
+    ],
+    ghLink: "",
+  },
+  {
+    type: 'task',
+    imgPath: dockercompose,
+    title: t('task_backup_monitoring_title'),
+    description: t('task_backup_monitoring_description'),
+    skills: [
+      "Azure Monitor",
+      "Performance",
+      "Incident Response",
+      "SLA Management",
+      "Alerting",
+      "High Availability"
+    ],
+    ghLink: "",
+  },
+  {
+    type: 'task',
+    imgPath: dockercompose,
+    title: t('task_git_workflow_title'),
+    description: t('task_git_workflow_description'),
+    skills: [
+      "GitLab CI",
+      "Pipeline Automation",
+      "CI/CD",
+      "Shell Scripting",
+      "Automation",
+      "Version Control"
+    ],
+    ghLink: "",
+  },
+  {
+    type: 'task',
+    imgPath: dockercompose,
+    title: t('task_mach_testing_title'),
+    description: t('task_mach_testing_description'),
+    skills: [
+      "Microservices",
+      "API Gateway",
+      "Performance",
+      "Testing",
+      "Service Mesh",
+      "Monitoring"
+    ],
+    ghLink: "",
+  },
+  {
+    type: 'task',
+    imgPath: dockercompose,
+    title: t('task_mirror_monitoring_title'),
+    description: t('task_mirror_monitoring_description'),
+    skills: [
+      "Monitoring",
+      "Performance",
+      "Incident Response",
+      "Alerting",
+      "Shell Scripting",
+      "Automation"
+    ],
+    ghLink: "",
+  },
+
+  // MACH & Modern Architecture Projects
+  {
+    type: 'project',
+    imgPath: dockercompose,
+    title: t('project_mach_deployment_title'),
+    description: t('project_mach_deployment_description'),
+    skills: [
+      "Microservices",
+      "Cloud Native",
+      "GitHub Actions",
+      "Pipeline Automation",
+      "Infrastructure as Code",
+      "Service Mesh"
+    ],
+    ghLink: "",
+  },
+
+  // Web Development Projects (если они нужны в портфолио)
+  {
+    type: 'project',
+    imgPath: phbt,
+    title: t('project_phbt_title'),
+    description: t('project_phbt_description'),
+    skills: ["React", "Firebase", "JavaScript", "CSS"],
+    ghLink: "https://github.com/ASKoshelenko/phbt",
+    demoLink: "https://crm-phbt.web.app/",
+  },
+  {
+    type: 'project',
+    imgPath: landing,
+    title: t('project_landing_title'),
+    description: t('project_landing_description'),
+    skills: ["HTML", "CSS", "JavaScript"],
+    ghLink: "https://github.com/ASKoshelenko/Landing-page#readme",
+  },
+  {
+    type: 'project',
+    imgPath: foxtar,
+    title: t('project_multipage_title'),
+    description: t('project_multipage_description'),
+    skills: ["React", "Redux", "Node.js", "MongoDB"],
+    ghLink: "https://github.com/ASKoshelenko/Project-Store#readme",
+  },
+  {
+    type: 'project',
+    imgPath: calc,
+    title: t('project_calculator_title'),
+    description: t('project_calculator_description'),
+    skills: ["JavaScript", "HTML", "CSS"],
+    ghLink: "https://github.com/ASKoshelenko/calculator",
+  },
+  {
+    type: 'project',
+    imgPath: chess,
+    title: t('project_chess_title'),
+    description: t('project_chess_description'),
+    skills: ["React", "TypeScript"],
+    ghLink: "https://github.com/ASKoshelenko/chess#readme",
+  },
+  {
+    type: 'project',
+    imgPath: fakestore,
+    title: t('project_fakestore_title'),
+    description: t('project_fakestore_description'),
+    skills: ["React", "REST API"],
+    ghLink: "https://github.com/ASKoshelenko/fakeStoreAPI#readme",
+  },
+  {
+    type: 'project',
+    imgPath: git,
+    title: t('project_searchapp_title'),
+    description: t('project_searchapp_description'),
+    skills: ["React", "REST API", "GitHub API"],
+    ghLink: "https://github.com/ASKoshelenko/react_githubSearch#readme",
+  }
+];
 
   const hasSkillsFromCategory = (projectSkills, category) => {
     return projectSkills.some(skill => CATEGORIES[category]?.includes(skill));

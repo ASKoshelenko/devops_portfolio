@@ -168,6 +168,38 @@
   "project_git_mirror_description": "Implemented robust synchronization system between BitBucket and GitLab repositories, enabling seamless collaboration between multiple development teams with different platform preferences. Solved access management challenges through automated mirroring, ensuring real-time code synchronization while maintaining security policies. Resulted in 100% code consistency across platforms and eliminated access management overhead.",
 
   "task_mirror_monitoring_title": "Repository Sync Monitoring",
-  "task_mirror_monitoring_description": "Developed monitoring system for repository synchronization status with automated alerts and recovery procedures for sync failures. Implemented metrics collection for sync performance and drift detection."
+  "task_mirror_monitoring_description": "Developed monitoring system for repository synchronization status with automated alerts and recovery procedures for sync failures. Implemented metrics collection for sync performance and drift detection.",
+
+  "project_gke_migration_title": "E-commerce Platform Migration to GKE",
+  "project_gke_migration_description": "Successfully migrated e-commerce platform to GKE, implementing microservices architecture with automated scaling. Reduced response time from 3s to 100ms, improved transaction success to 99.99%, and achieved 30% cost reduction ($35K monthly savings).",
+
+  "project_network_security_title": "GCP Network Security Implementation",
+  "project_network_security_description": "Implemented comprehensive network security solution including bastion host setup, IAP configuration, and network segmentation. Eliminated security incidents and achieved complete network isolation with controlled access points.",
+
+  "project_infrastructure_auto_title": "Enterprise Infrastructure Automation",
+  "project_infrastructure_auto_description": "Developed end-to-end infrastructure automation for retail platform using Terraform. Reduced provisioning time from 7 days to 25 minutes, achieved 99.8% configuration accuracy, and optimized resource utilization to 78%.",
+
+  "project_canary_deployment_title": "Cloud Run Canary Deployment System",
+  "project_canary_deployment_description": "Implemented progressive delivery system using Cloud Run with canary deployments. Achieved zero downtime deployments, 95% reduction in deployment risks, and saved $180K quarterly from prevented incidents.",
+
+  "project_load_balancer_title": "Global HTTP Load Balancer Implementation",
+  "project_load_balancer_description": "Designed and implemented global HTTP load balancing solution improving availability from 98.5% to 99.99%. Reduced response time from 2.5s to 0.8s and enabled automated scaling across regions.",
+
+  "project_cicd_pipeline_title": "E-Commerce CI/CD Pipeline",
+  "project_cicd_pipeline_description": "Transformed deployment process for e-commerce platform, reducing deployment time from 4 hours to 12 minutes. Achieved 99.9% deployment success rate and implemented instant rollback capability.",    "category_cloud_engineering": "Cloud Engineering & Architecture",
+    "category_containerization": "Containerization & Orchestration",
+    "category_automation_cicd": "CI/CD & Deployment Automation",
+    "category_infrastructure": "Infrastructure & IaC",
+    "category_monitoring_reliability": "Monitoring & SRE",
+    "category_security": "Security & Compliance",
+  
+    "category_cloud_engineering_hint": "Cloud platforms expertise: AWS, Azure, GCP, and cloud-native solutions",
+    "category_containerization_hint": "Container technologies: Kubernetes, Docker, and microservices architecture",
+    "category_automation_cicd_hint": "Continuous Integration/Delivery and deployment automation",
+    "category_infrastructure_hint": "Infrastructure as Code and system architecture",
+    "category_monitoring_reliability_hint": "System monitoring, observability, and Site Reliability Engineering",
+    "category_security_hint": "Security implementation and compliance standards"
+  
+  
 
 }
