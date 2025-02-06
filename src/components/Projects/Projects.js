@@ -18,6 +18,18 @@ import jira from "../../Assets/Projects/jira.png";
 import landing from "../../Assets/Projects/landing.png";
 import proxmox from "../../Assets/Projects/proxmox.png";
 
+import gke from "../../Assets/Projects/gke.png";
+import mach from "../../Assets/Projects/mach.png";
+import mirroring from "../../Assets/Projects/mirroring.png";
+import canary from "../../Assets/Projects/canary.png";
+import logicapp from "../../Assets/Projects/logicapp.png";
+import monitoring from "../../Assets/Projects/monitoring.png";
+import cicd from "../../Assets/Projects/cicd.png";
+import gcpkube from "../../Assets/Projects/gcpkube.png";
+import marathon from "../../Assets/Projects/marathon.png";
+import lambda from "../../Assets/Projects/lambda.png";
+import azure from "../../Assets/Projects/azure.png";
+
 // DevOps categories with their respective skills
 const CATEGORIES = {
   category_cloud_engineering: [
@@ -81,7 +93,7 @@ function Projects() {
     // Cloud Engineering Projects
     {
       type: 'project',
-      imgPath: dockercompose,
+      imgPath: gke,
       title: t('project_gke_migration_title'),
       description: t('project_gke_migration_description'),
       skills: [
@@ -96,7 +108,7 @@ function Projects() {
     },
     {
       type: 'project',
-      imgPath: dockercompose,
+      imgPath: azure,
       title: t('project_azure_infrastructure_title'),
       description: t('project_azure_infrastructure_description'),
       skills: [
@@ -111,7 +123,7 @@ function Projects() {
     },
     {
       type: 'project',
-      imgPath: dockercompose,
+      imgPath: lambda,
       title: t('project_aws_lambda_title'),
       description: t('project_aws_lambda_description'),
       skills: [
@@ -126,7 +138,7 @@ function Projects() {
     },
     {
       type: 'project',
-      imgPath: dockercompose,
+      imgPath: marathon,
       title: t('project_terraform_infrastructure_title'),
       description: t('project_terraform_infrastructure_description'),
       skills: [
@@ -158,7 +170,7 @@ function Projects() {
     // Containerization Projects
     {
       type: 'project',
-      imgPath: dockercompose,
+      imgPath: gcpkube,
       title: t('project_gcp_kubernetes_title'),
       description: t('project_gcp_kubernetes_description'),
       skills: [
@@ -190,7 +202,7 @@ function Projects() {
     // Automation & CI/CD Projects
     {
       type: 'project',
-      imgPath: dockercompose,
+      imgPath: cicd,
       title: t('project_bosch_cicd_title'),
       description: t('project_bosch_cicd_description'),
       skills: [
@@ -218,37 +230,6 @@ function Projects() {
       ],
       ghLink: "",
     },
-    // Security & Compliance Projects
-  {
-    type: 'project',
-    imgPath: dockercompose,
-    title: t('project_multicloud_security_title'),
-    description: t('project_multicloud_security_description'),
-    skills: [
-      "IAM",
-      "Security Groups",
-      "Compliance",
-      "Access Management",
-      "Cloud Security",
-      "VPN"
-    ],
-    ghLink: "",
-  },
-  {
-    type: 'project',
-    imgPath: dockercompose,
-    title: t('project_network_security_title'),
-    description: t('project_network_security_description'),
-    skills: [
-      "Security Groups",
-      "IAP",
-      "Cloud Security",
-      "Access Management",
-      "Compliance",
-      "Networking"
-    ],
-    ghLink: "",
-  },
   {
     type: 'project',
     imgPath: nginx,
@@ -268,7 +249,7 @@ function Projects() {
   // Monitoring & Reliability Projects
   {
     type: 'project',
-    imgPath: dockercompose,
+    imgPath: monitoring,
     title: t('project_monitoring_platform_title'),
     description: t('project_monitoring_platform_description'),
     skills: [
@@ -281,41 +262,11 @@ function Projects() {
     ],
     ghLink: "",
   },
-  {
-    type: 'project',
-    imgPath: dockercompose,
-    title: t('project_monitoring_solution_title'),
-    description: t('project_monitoring_solution_description'),
-    skills: [
-      "Grafana",
-      "Zabbix",
-      "Performance",
-      "Incident Response",
-      "SLA Management",
-      "Alerting"
-    ],
-    ghLink: "",
-  },
-  {
-    type: 'project',
-    imgPath: dockercompose,
-    title: t('task_elk_title'),
-    description: t('task_elk_description'),
-    skills: [
-      "ELK Stack",
-      "Performance",
-      "Monitoring",
-      "Incident Response",
-      "Alerting",
-      "SLA Management"
-    ],
-    ghLink: "",
-  },
 
   // Cloud Services & Integration Projects
   {
     type: 'project',
-    imgPath: dockercompose,
+    imgPath: logicapp,
     title: t('project_commercetools_backup_title'),
     description: t('project_commercetools_backup_description'),
     skills: [
@@ -330,22 +281,7 @@ function Projects() {
   },
   {
     type: 'project',
-    imgPath: dockercompose,
-    title: t('project_cloud_migration_title'),
-    description: t('project_cloud_migration_description'),
-    skills: [
-      "AWS",
-      "Azure",
-      "Cloud Architecture",
-      "Infrastructure as Code",
-      "Cost Optimization",
-      "High Availability"
-    ],
-    ghLink: "",
-  },
-  {
-    type: 'project',
-    imgPath: dockercompose,
+    imgPath: canary,
     title: t('project_canary_deployment_title'),
     description: t('project_canary_deployment_description'),
     skills: [
@@ -362,7 +298,7 @@ function Projects() {
   // DevOps Automation Tasks
   {
     type: 'task',
-    imgPath: dockercompose,
+    imgPath: lambda,
     title: t('task_lambda_migration_title'),
     description: t('task_lambda_migration_description'),
     skills: [
@@ -377,7 +313,7 @@ function Projects() {
   },
   {
     type: 'task',
-    imgPath: dockercompose,
+    imgPath: marathon,
     title: t('task_terraform_azure_title'),
     description: t('task_terraform_azure_description'),
     skills: [
@@ -394,7 +330,7 @@ function Projects() {
   // Git & Version Control Projects
   {
     type: 'project',
-    imgPath: dockercompose,
+    imgPath: mirroring,
     title: t('project_git_mirror_title'),
     description: t('project_git_mirror_description'),
     skills: [
@@ -409,7 +345,7 @@ function Projects() {
   },
   {
     type: 'project',
-    imgPath: dockercompose,
+    imgPath: git,
     title: t('project_git_optimization_title'),
     description: t('project_git_optimization_description'),
     skills: [
@@ -425,52 +361,7 @@ function Projects() {
   // Additional DevOps Tasks
   {
     type: 'task',
-    imgPath: dockercompose,
-    title: t('task_microservices_deployment_title'),
-    description: t('task_microservices_deployment_description'),
-    skills: [
-      "Kubernetes",
-      "Microservices",
-      "Service Mesh",
-      "Container Security",
-      "API Gateway",
-      "Cloud Native"
-    ],
-    ghLink: "",
-  },
-  {
-    type: 'task',
-    imgPath: dockercompose,
-    title: t('task_backup_monitoring_title'),
-    description: t('task_backup_monitoring_description'),
-    skills: [
-      "Azure Monitor",
-      "Performance",
-      "Incident Response",
-      "SLA Management",
-      "Alerting",
-      "High Availability"
-    ],
-    ghLink: "",
-  },
-  {
-    type: 'task',
-    imgPath: dockercompose,
-    title: t('task_git_workflow_title'),
-    description: t('task_git_workflow_description'),
-    skills: [
-      "GitLab CI",
-      "Pipeline Automation",
-      "CI/CD",
-      "Shell Scripting",
-      "Automation",
-      "Version Control"
-    ],
-    ghLink: "",
-  },
-  {
-    type: 'task',
-    imgPath: dockercompose,
+    imgPath: mach,
     title: t('task_mach_testing_title'),
     description: t('task_mach_testing_description'),
     skills: [
@@ -483,26 +374,11 @@ function Projects() {
     ],
     ghLink: "",
   },
-  {
-    type: 'task',
-    imgPath: dockercompose,
-    title: t('task_mirror_monitoring_title'),
-    description: t('task_mirror_monitoring_description'),
-    skills: [
-      "Monitoring",
-      "Performance",
-      "Incident Response",
-      "Alerting",
-      "Shell Scripting",
-      "Automation"
-    ],
-    ghLink: "",
-  },
 
   // MACH & Modern Architecture Projects
   {
     type: 'project',
-    imgPath: dockercompose,
+    imgPath: mach,
     title: t('project_mach_deployment_title'),
     description: t('project_mach_deployment_description'),
     skills: [
